@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="com.td.oca.stockProductDemo">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <title>Home Equity Application</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="bower_components/td-ui-responsive-app/styles/style-td-emerald.css">
+
+
+
+</head>
+
+<!--[if IE]>
+<body class="ie" data-ng-init="msg='com.td.oca.stockProduct';">
+<![endif]-->
+<!--[if !IE]><!--->
+<body data-ng-init="msg='com.td.oca.stockProduct';">
+<!--<![endif]-->
+
+<!--[if lt IE 11]>
+<div data-td-alert-browse-happy></div>
+<![endif]-->
+<div data-td-ui-navigation class="td-primary-nav"></div>
+<div class="">
+    <global-nav items=''></global-nav>
+    <div role="main" class="td-callout white" style="border-radius: 15px;margin-top: 30px;">
+        <div class="td-container">
+            <div class="td-container-sec-deprecated">
+                <div class="td-row">
+                    <div class="td-col-lg-12">
+                        <div data-ui-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--3rd Party files-->
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.min.js"></script>
+<script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-cookie/angular-cookie.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/td-core-i18n-app/td-core-i18n-app.js"></script>
+<script src="bower_components/td-core-browse-happy-app/td-core-browse-happy-app.js"></script>
+<script src="bower_components/td-core-navigation-app/td-core-navigation-app.js"></script>
+<script src="bower_components/td-core-service-api-app/td-core-service-api-app.js"></script>
+<script src="bower_components/td-core-container-app/td-core-container-app.js"></script>
+<script src="bower_components/td-core-logo-app/td-core-logo-app.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-ui-date/src/date.js"></script>
+<script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/td-oao-input-field-app/td-oao-input-field-app.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/td-oao-income-form-app/td-oao-income-form-app.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+<script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+<script src="bower_components/td-oao-funding-form-app/td-oao-funding-form-app.js"></script>
+<script src="bower_components/td-oao-uuid-generator-app/td-oao-uuid-generator-app.js"></script>
+<script src="bower_components/td-oao-identification-form-app/td-oao-identification-form-app.js"></script>
+<script src="bower_components/td-oao-address-form-app/td-oao-address-form-app.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/td-oao-basic-form-app/td-oao-basic-form-app.js"></script>
+<script src="bower_components/angular-scroll/angular-scroll.js"></script>
+<script src="bower_components/td-oao-account-use-aml-form-app/td-oao-account-use-aml-form-app.js"></script>
+<script src="bower_components/td-oao-cross-sell-app/td-oao-cross-sell-app.js"></script>
+<script src="bower_components/td-oao-extra-feature-app/td-oao-extra-feature-app.js"></script>
+<script src="bower_components/td-oao-final-agreement-app/td-oao-final-agreement-app.js"></script>
+<script src="bower_components/td-oao-order-checks-app/td-oao-order-checks-app.js"></script>
+<script src="bower_components/td-oao-direct-deposit-app/td-oao-direct-deposit-app.js"></script>
+<script src="bower_components/td-oao-go-extra-actions-app/td-oao-go-extra-actions-app.js"></script>
+<script src="bower_components/td-oao-go-map-app/td-oao-go-map-app.js"></script>
+<script src="bower_components/td-oao-go-page-app/td-oao-go-page-app.js"></script>
+<script src="bower_components/td-oao-link-accounts-app/td-oao-link-accounts-app.js"></script>
+<script src="bower_components/td-oao-verification-form-app/td-oao-verification-form-app.js"></script>
+<script src="bower_components/td-ui-navigation-app/td-ui-navigation-app.js"></script>
+<script src="bower_components/td-oao-checking-account-flow-app/td-oao-checking-account-flow-app.js"></script>
+<script src="bower_components/angular-uuid-service/angular-uuid-service.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/td-oao-sign-in-modal-app/td-oao-sign-in-modal-app.js"></script>
+<script src="bower_components/ng-idle/angular-idle.js"></script>
+<!-- endbower -->
+
+
+<!--App files-->
+<script src="app.js"></script>
+<script src="services/formatter-service.js"></script>
+<script src="services/product-service.js"></script>
+
+<script src="controllers/productController.js"></script>
+<script src="controllers/heMenuController.js"></script>
+
+<script src="states/td-stock-product/td-stock-product-state.js"></script>
+<script src="states/td-stock-product-child1/td-stock-product-child1-state.js"></script>
+<script src="states/td-stock-productList/td-stock-productList-state.js"></script>
+<script src="states/td-he-menu/td-he-menu-state.js"></script>
+<script src="i18n/app-en-ca.js"></script>
+<script src="i18n/app-fr-ca.js"></script>
+
+
+
+<script src="directives/hello-world-directive.js"></script>
+<script src="directives/hello-data-directive.js"></script>
+<script src="directives/product-directive.js"></script>
+<script src="directives/hemenu-directive.js"></script>
+
+
+
+
+<!--Root application-->
+<script src="demo-app.js"></script>
+</body>
+</html>

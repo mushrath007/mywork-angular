@@ -1,0 +1,10 @@
+{
+	"app": {
+		"id": "69fa376d-71ff-4ccf-88c6-457e840c532f",
+		"author": "TD",
+		"version": "0.0.0",
+		"name": "td-example-personal",
+		"dependencies": [],
+    "description": ""
+	}
+}

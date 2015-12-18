@@ -1,0 +1,47 @@
+{
+  "name": "td-example-personal",
+  "version": "0.0.0",
+  "authors": [
+    "MMOHAMM"
+  ],
+  "description": "",
+  "_tdbank": {
+    "namespace": "com.td.oca",
+    "product": "example",
+    "projectType": "app",
+    "workflow": "workflow.json",
+    "moduleName": "com.td.oca.examplePersonal"
+  },
+  "license": "Copyright TD",
+  "homepage": "",
+  "main": [
+    "td-example-personal.js",
+    "styles/app-styles.less"
+  ],
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2",
+    "td-core-angular-aria": "~1",
+    "td-core-i18n": "~4",
+    "td-core-resource": "~1",
+    "td-core-router": "~1",
+    "angular-validation-ghiscoding": "~1.4.17"
+  },
+  "devDependencies": {
+    "td-alert-browse-happy": "~2",
+    "td-core-bootstrap-style": "~5",
+    "td-ui-navigation": "~2",
+    "html5shiv": "~3.7.2",
+    "es5-shim": "~4.0.3",
+    "angular-mocks": "~1.2",
+    "jquery-simulate": "~1.0",
+    "jquery": "~2.1"
+  }
+}

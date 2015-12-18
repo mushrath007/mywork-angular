@@ -1,0 +1,16 @@
+npm-debug.log
+node_modules
+*.swp
+.DS_Store
+.idea/*
+!.idea/runConfigurations/
+!.idea/inspectionProfiles/
+!.idea/jsLinters/
+!.jsLibraryMappings.xml
+dist
+test-results*.xml
+public/styles/
+docs
+**/bower_components/
+/reports
+workflow.json

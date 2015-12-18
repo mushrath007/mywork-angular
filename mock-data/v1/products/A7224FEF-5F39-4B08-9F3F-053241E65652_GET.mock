@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"product": {
+		"id": "A7224FEF-5F39-4B08-9F3F-053241E65652",
+		"name": "Every Day",
+		"lobCd": "Bank Accounts",
+		"typeCd": "Chequing",
+		"currencyCd": [
+			"CAD"
+		]
+	}
+}

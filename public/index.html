@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="com.td.oca.examplePersonalDemo">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>Demo Business App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="bower_components/td-ui-responsive-app/styles/style-td-emerald.css">
+
+</head>
+
+<!--[if IE]>
+<body class="ie" data-ng-init="msg='com.td.oca.examplePersonal';">
+<![endif]-->
+<!--[if !IE]><!--->
+<body data-ng-init="msg='com.td.oca.examplePersonal';">
+<!--<![endif]-->
+
+<!--[if lt IE 11]>
+<div data-td-alert-browse-happy></div>
+<![endif]-->
+
+<div data-td-ui-navigation class="td-primary-nav"></div>
+<div class="">
+    <global-nav items=''></global-nav>
+    <div role="main" class="td-callout white" style="border-radius: 15px;margin-top: 30px;">
+        <div class="td-container">
+            <div class="td-container-sec-deprecated">
+                <div class="td-row">
+                    <div class="td-col-lg-12">
+                        <div data-ui-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--3rd Party files-->
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.min.js"></script>
+<script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/td-core-angular-aria/td-core-angular-aria.js"></script>
+<script src="bower_components/angular-cookie/angular-cookie.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/td-core-i18n/td-core-i18n.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/td-core-resource/td-core-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/td-core-config-app/td-core-config-app.js"></script>
+<script src="bower_components/td-core-uri-utilities/td-core-uri-utilities.js"></script>
+<script src="bower_components/td-core-route-change-listener/td-core-route-change-listener.js"></script>
+<script src="bower_components/td-core-router/td-core-router.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/locales/validation/en.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/locales/validation/fr.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/dist/angular-validation.min.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/src/validation-directive.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/src/validation-common.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/src/validation-rules.js"></script>
+<script src="bower_components/angular-validation-ghiscoding/src/validation-service.js"></script>
+<script src="bower_components/td-alert-browse-happy/td-alert-browse-happy.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-recursion/angular-recursion.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/mobile-detect/mobile-detect.js"></script>
+<script src="bower_components/td-core-device-info-app/td-core-device-info-app.js"></script>
+<script src="bower_components/td-core-container/td-core-container.js"></script>
+<script src="bower_components/td-ui-responsive-app/td-ui-responsive-app.js"></script>
+<script src="bower_components/td-ui-navigation/td-ui-navigation.js"></script>
+<!-- endbower -->
+
+
+<!--App files-->
+<script src="app.js"></script>
+<script src="states/td-example-personal/td-example-personal-state.js"></script>
+<script src="states/td-example-personal-child1/td-example-personal-child1-state.js"></script>
+<script src="states/td-he-menu/td-he-menu-state.js"></script>
+<script src="i18n/app-en-ca.js"></script>
+<script src="i18n/app-fr-ca.js"></script>
+
+<script src="controllers/heMenuController.js"></script>
+
+<script src="services/formatter-service.js"></script>
+<script src="directives/hello-world-directive.js"></script>
+<script src="directives/hello-data-directive.js"></script>
+
+<!--Root application-->
+<script src="demo-app.js"></script>
+
+</body>
+</html>
