@@ -23,6 +23,8 @@
     'com.td.oca.coreRouter',
     'com.td.oca.uiResponsiveApp',
     'ghiscoding.validation',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngResource',
+     'ui.bootstrap'
   ]);
 }());

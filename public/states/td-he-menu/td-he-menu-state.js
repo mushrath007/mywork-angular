@@ -16,7 +16,7 @@
                 controller: "CollapseDemoCtrl",
                 data: {
                     navigation: {
-                        label: "Home Equity"
+                        label: "Angular Validations"
                     }
                 }
                 // see ui-router's stateConfig documentation for other parameters you can configure here
