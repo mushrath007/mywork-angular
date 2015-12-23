@@ -349,3 +349,83 @@
         <pre>Page: {{currentPage}} / {{numPages}}</pre>
     </div>
 </div>
+
+
+<h3 ng-class="{'td-collapse-icon':!isCollapsed5, 'td-expand-icon':isCollapsed5}" ng-click="isCollapsed5 = !isCollapsed5">TO DO</h3>
+<div uib-collapse="isCollapsed5" ng-show="isCollapsed5">
+    <h2>Todo</h2>
+    <div ng-controller="TodoCtrl">
+        <span>{{remaining()}} of {{todos.length}} remaining</span>
+        [ <a href="" ng-click="archive()">archive</a> ]
+        <ul class="unstyled">
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+        <form ng-submit="addTodo()">
+            <input type="text" ng-model="todoText"  size="30"
+                   placeholder="add new todo here">
+            <input class="btn-primary" type="submit" value="add">
+        </form>
+    </div>
+</div>
+
+
+<h3 ng-class="{'td-collapse-icon':!isCollapsed6, 'td-expand-icon':isCollapsed6}" ng-click="isCollapsed6 = !isCollapsed6">RestFUL Services</h3>
+<div uib-collapse="isCollapsed6" ng-show="isCollapsed6">
+    <div  ng-controller="ContactController">
+        <form class="well row" name="myForm">
+
+            <label>Name
+                <input type="text" name="name" ng-model="newcontact.name" required/>
+            </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.name.$error.required" ng-if='myForm.name.$dirty'>
+               Required!</span>
+            </div>
+
+            <label>Email
+                <input type="email" name="email" ng-model="newcontact.email" required/>
+            </label>
+
+            <div role="alert">
+              <span class="error" ng-show="myForm.email.$error.required" ng-if='myForm.email.$dirty'>
+                Required!</span>
+              <span class="error" ng-show="myForm.email.$error.email" ng-if='myForm.email.$dirty'>
+                Not valid email!</span>
+            </div>
+
+            <label>Phone
+                <input type="number" name="phone" ng-model="newcontact.phone" required/>
+            </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.phone.$error.required" ng-if='myForm.phone.$dirty'>
+               Required!</span>
+            </div>
+            <br/>
+            <input type="hidden" ng-model="newcontact.id" />
+            <input type="button" value="Save" ng-click="saveContact()" ng-disabled="myForm.$invalid" class="btn btn-primary" />
+        </form>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="contact in contacts">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td> <a href="javascript:void(0)" ng-click="edit(contact.id)">edit</a> | <a href="javascript:void(0)" ng-click="delete(contact.id)">delete</a>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
