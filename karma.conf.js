@@ -30,6 +30,7 @@ module.exports = function(config) {
       'public/bower_components/angular-validation-ghiscoding/src/validation-common.js',
       'public/bower_components/angular-validation-ghiscoding/src/validation-rules.js',
       'public/bower_components/angular-validation-ghiscoding/src/validation-service.js',
+      'public/bower_components/angular-mask/dist/ngMask.js',
       'public/bower_components/td-alert-browse-happy/td-alert-browse-happy.js',
       'public/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'public/bower_components/angular-animate/angular-animate.js',

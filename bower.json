@@ -32,7 +32,8 @@
     "td-core-i18n": "~4",
     "td-core-resource": "~1",
     "td-core-router": "~1",
-    "angular-validation-ghiscoding": "~1.4.17"
+    "angular-validation-ghiscoding": "~1.4.17",
+    "angular-mask": "~3.0.16"
   },
   "devDependencies": {
     "td-alert-browse-happy": "~2",

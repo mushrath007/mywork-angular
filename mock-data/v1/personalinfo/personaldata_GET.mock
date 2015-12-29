@@ -1,0 +1,63 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 1
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 2
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 3
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 4
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 5
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 6
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 7
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 8
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 9
+},
+{
+  "name": "Bell",
+  "email": "test@gmail.com",
+  "phone": 8132055478,
+  "id": 10
+}

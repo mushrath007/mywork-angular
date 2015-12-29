@@ -25,6 +25,7 @@
     'ghiscoding.validation',
     'pascalprecht.translate',
     'ngResource',
-     'ui.bootstrap'
+    'ui.bootstrap',
+    'ngMask'
   ]);
 }());

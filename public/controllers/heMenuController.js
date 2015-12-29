@@ -223,12 +223,68 @@
             var uid = 1;
 
             //contacts array to hold list of all contacts
-            var contacts = [{
-                id: 0,
-                'name': 'Megha',
-                'email': 'hello@gmail.com',
-                'phone': '123-2343-44'
-            }];
+            var contacts = [
+                {
+                    "name": "Bell1",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 1
+                },
+                {
+                    "name": "Bell2",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 2
+                },
+                {
+                    "name": "Bell3",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 3
+                },
+                {
+                    "name": "Bell4",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 4
+                },
+                {
+                    "name": "Bell5",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 5
+                },
+                {
+                    "name": "Bell6",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 6
+                },
+                {
+                    "name": "Bell7",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 7
+                },
+                {
+                    "name": "Bell8",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 8
+                },
+                {
+                    "name": "Bell9",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 9
+                },
+                {
+                    "name": "Bell10",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 10
+                }];
+
 
             //save method create a new contact if not already exists
             //else update the existing object
@@ -257,7 +313,6 @@
                         return contacts[i];
                     }
                 }
-
             };
 
             //iterate through contacts list and delete
@@ -278,13 +333,39 @@
 
         .controller('ContactController',  function ($scope, ContactService) {
 
+            $scope.isCollapsed6 = true;
+
             $scope.contacts = ContactService.list();
+
+            $scope.viewby = 3;
+            $scope.totalItems = $scope.contacts.length;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = $scope.viewby;
+            $scope.maxSize = 5; //Number of pager buttons to show
+
+            $scope.setPage = function (pageNo) {
+                $scope.currentPage = pageNo;
+            };
+
+            $scope.pageChanged = function() {
+                console.log('Page changed to: ' + $scope.currentPage);
+            };
+
+            $scope.setItemsPerPage = function(num) {
+                $scope.itemsPerPage = num;
+                $scope.currentPage = 1; //reset to first page
+            }
 
             $scope.saveContact = function () {
                 ContactService.save($scope.newcontact);
                 $scope.newcontact = {};
             };
 
+            $scope.Reset = function(){
+                $scope.newcontact = {};
+            };
+
+            $scope.Reset();
 
             $scope.delete = function (id) {
                 ContactService.delete(id);
@@ -294,6 +375,51 @@
 
             $scope.edit = function (id) {
                 $scope.newcontact = angular.copy(ContactService.get(id));
+            };
+        })
+
+
+        .filter('tel',function(){
+            return function(tel){
+                if(!tel){
+                    return '';
+                }
+
+                var value = tel.toString().trim().replace(/^\+/, '');
+
+                if(value.match(/[^0-9]/)){
+                    return tel;
+                }
+
+                var country, city, number ;
+
+                switch (value.length){
+                    case 10:
+                        country = 1;
+                        city = value.slice(0,3);
+                        number = value.slice(3);
+                        break;
+                    case 11:
+                        country = value[0];
+                        city = value.slice(1,4);
+                        number = value.slice(4);
+                        break;
+                    case 12:
+                        country = value.slice(0,3);
+                        city = value.slice(3,5);
+                        number = value.slice(5);
+                        break;
+                    default :
+                        return tel;
+                }
+
+                if(country == 1){
+                    country = "";
+                }
+
+                number = number.slice(0,3) + '-' + number.slice(3);
+
+                return (country + "(" + city + ")" + number).trim();
             };
         });
 
