@@ -1,63 +1,64 @@
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 1
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 2
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 3
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 4
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 5
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 6
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 7
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 8
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 9
-},
-{
-  "name": "Bell",
-  "email": "test@gmail.com",
-  "phone": 8132055478,
-  "id": 10
-}
+[
+                {
+                    "name": "Bell1",
+                    "email": "test@gmail.com",
+                    "phone": 8132055478,
+                    "id": 1
+                },
+                {
+                    "name": "Octavius",
+                    "email": "Octavius@gmail.com",
+                    "phone": 8132055478,
+                    "id": 2
+                },
+                {
+                    "name": "Alexis",
+                    "email": "Alexis@gmail.com",
+                    "phone": 8132055478,
+                    "id": 3
+                },
+                {
+                    "name": "Colton",
+                    "email": "Colton@gmail.com",
+                    "phone": 8132055478,
+                    "id": 4
+                },
+                {
+                    "name": "Abdul",
+                    "email": "Abdul@gmail.com",
+                    "phone": 8132055478,
+                    "id": 5
+                },
+                {
+                    "name": "Ian",
+                    "email": "Ian@gmail.com",
+                    "phone": 8132055478,
+                    "id": 6
+                },
+                {
+                    "name": "Britanney",
+                    "email": "Britanney@gmail.com",
+                    "phone": 8132055478,
+                    "id": 7
+                },
+                {
+                    "name": "Geraldine",
+                    "email": "Geraldine@gmail.com",
+                    "phone": 8132055478,
+                    "id": 8
+                },
+                {
+                    "name": "Geral",
+                    "email": "Geral@gmail.com",
+                    "phone": 8132055478,
+                    "id": 9
+                },
+                {
+                    "name": "GeralIan",
+                    "email": "GeralIan@gmail.com",
+                    "phone": 8132055478,
+                    "id": 10
+                }]

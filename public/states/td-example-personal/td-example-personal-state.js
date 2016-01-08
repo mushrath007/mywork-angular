@@ -14,7 +14,7 @@
       templateUrl: 'states/td-example-personal/td-example-personal.tpl.html',
       data: {
         navigation: {
-          label: "root"
+          label: "Login"
         }
       }
       // see ui-router's stateConfig documentation for other parameters you can configure here 

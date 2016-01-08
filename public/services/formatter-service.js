@@ -52,4 +52,16 @@ angular.module('com.td.oca.examplePersonal')
             });
           }
         }
-    });
+    })
+
+    .factory('AngularApiResource',['$resource',function($resource){
+
+        return $resource('/v1/AngularApi/data/sample1/:id',
+            {id: '@id'},
+            { 'query':
+                {
+                    method: 'GET',
+                    isArray: false
+                }
+            });
+    }]);

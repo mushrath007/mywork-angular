@@ -8,11 +8,16 @@
     angular.module('com.td.oca.examplePersonal')
         .controller('CollapseDemoCtrl',function ($scope, $state){
                 $scope.isCollapsed = false;
+                $scope.isCollapsed6 = false;
 
                 $scope.Continue = function(){
                     $state.go("td-stock-productList");
                 };
               })
+
+        .controller('CollapseDemoCtrl1',function ($scope){
+            $scope.Collapse = false;
+        })
 
         .controller('Ctrl', function ($scope) {
             $scope.$validationOptions = {
@@ -219,8 +224,6 @@
         //Contact Service && Controller
 
         .service('ContactService', function () {
-            //to create unique contact id
-            var uid = 1;
 
             //contacts array to hold list of all contacts
             var contacts = [
@@ -231,60 +234,62 @@
                     "id": 1
                 },
                 {
-                    "name": "Bell2",
-                    "email": "test@gmail.com",
+                    "name": "Octavius",
+                    "email": "Octavius@gmail.com",
                     "phone": 8132055478,
                     "id": 2
                 },
                 {
-                    "name": "Bell3",
-                    "email": "test@gmail.com",
+                    "name": "Alexis",
+                    "email": "Alexis@gmail.com",
                     "phone": 8132055478,
                     "id": 3
                 },
                 {
-                    "name": "Bell4",
-                    "email": "test@gmail.com",
+                    "name": "Colton",
+                    "email": "Colton@gmail.com",
                     "phone": 8132055478,
                     "id": 4
                 },
                 {
-                    "name": "Bell5",
-                    "email": "test@gmail.com",
+                    "name": "Abdul",
+                    "email": "Abdul@gmail.com",
                     "phone": 8132055478,
                     "id": 5
                 },
                 {
-                    "name": "Bell6",
-                    "email": "test@gmail.com",
+                    "name": "Ian",
+                    "email": "Ian@gmail.com",
                     "phone": 8132055478,
                     "id": 6
                 },
                 {
-                    "name": "Bell7",
-                    "email": "test@gmail.com",
+                    "name": "Britanney",
+                    "email": "Britanney@gmail.com",
                     "phone": 8132055478,
                     "id": 7
                 },
                 {
-                    "name": "Bell8",
-                    "email": "test@gmail.com",
+                    "name": "Geraldine",
+                    "email": "Geraldine@gmail.com",
                     "phone": 8132055478,
                     "id": 8
                 },
                 {
-                    "name": "Bell9",
-                    "email": "test@gmail.com",
+                    "name": "Geral",
+                    "email": "Geral@gmail.com",
                     "phone": 8132055478,
                     "id": 9
                 },
                 {
-                    "name": "Bell10",
-                    "email": "test@gmail.com",
+                    "name": "GeralIan",
+                    "email": "GeralIan@gmail.com",
                     "phone": 8132055478,
                     "id": 10
                 }];
 
+            //to create unique contact id
+            var uid = contacts.length + 1;
 
             //save method create a new contact if not already exists
             //else update the existing object
@@ -333,7 +338,12 @@
 
         .controller('ContactController',  function ($scope, ContactService) {
 
+            $scope.coust = "trdgtf";
+
             $scope.isCollapsed6 = true;
+
+            $scope.sortType     = 'name';
+            $scope.sortReverse  = false;
 
             $scope.contacts = ContactService.list();
 
@@ -421,7 +431,56 @@
 
                 return (country + "(" + city + ")" + number).trim();
             };
-        });
+        })
+
+        .filter('ssnFilter', function () {
+            return function (ssnFilter) {
+                if (!ssnFilter) {
+                    return '';
+                }
+
+                var value = ssnFilter.toString().trim().replace(/^\+/, '');
+
+                if (value.match(/[^0-9]/)) {
+                    return ssnFilter;
+                }
+
+                return (ssnFilter.slice(0, 3).replace('*') + '-' + ssnFilter.slice(4, 5).replace('*') + '-' + ssnFilter.slice(4)).trim();
+            };
+        })
+
+        .filter('to_trusted', ['$sce', function($sce){
+            return function(text) {
+                return $sce.trustAsHtml(text);
+            };
+        }])
+
+        .controller('ResourceController',['$scope','AngularApiResource',function( $scope, AngularApiResource){
+            $scope.isCollapsed7 = true;
+
+            $scope.data = [];
+
+            AngularApiResource.query().$promise.then(function(data){
+                //var jsonData = angular.toJson(data,true);
+                $scope.parsedata = data;
+
+                console.log($scope.parsedata);
+
+                angular.forEach($scope.parsedata,function(item){
+                    console.log($scope.parsedata.Agreement[0].Name);
+                    angular.forEach(item,function(subItem){
+                        $scope.finaldata = subItem;
+                        console.log(subItem.Name);
+                    });
+                });
+            },
+            function(error){
+                //
+            });
+
+        }]);
+
+
 
 
 })();

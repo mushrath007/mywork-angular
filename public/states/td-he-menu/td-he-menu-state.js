@@ -13,7 +13,7 @@
             tdCoreRouterProvider.define('td-he-menu', {
                 url: '/',
                 templateUrl: 'states/td-he-menu/td-he-menu.tpl.html',
-                controller: "CollapseDemoCtrl",
+                controller: "CollapseDemoCtrl1",
                 data: {
                     navigation: {
                         label: "Angular Validations"
