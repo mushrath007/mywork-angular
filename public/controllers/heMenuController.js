@@ -464,23 +464,26 @@
                 //var jsonData = angular.toJson(data,true);
                 $scope.parsedata = data;
 
-                console.log($scope.parsedata);
+                console.log($scope.parsedata.Agreement);
 
                 angular.forEach($scope.parsedata,function(item){
-                    console.log($scope.parsedata.Agreement[0].Name);
+                    //console.log($scope.parsedata.Agreement[0].Name);
                     angular.forEach(item,function(subItem){
                         $scope.finaldata = subItem;
-                        console.log(subItem.Name);
+                        //console.log(subItem.Name);
                     });
                 });
             },
             function(error){
-                //
+                console.log('Error in Fetcing Data')
             });
 
+        }])
+
+        .controller('UIStatesController',['$scope',function($scope){
+            $scope.isCollapsed8 = true;
+
         }]);
-
-
 
 
 })();

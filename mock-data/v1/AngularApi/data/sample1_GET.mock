@@ -1,0 +1,112 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+   "Agreement":[
+      {
+        "id": 1,
+        "DemandDepositId": "0d077dc9-01dc-4d35-abe4-c2b06ac25d38",
+        "AltKey": {
+          "BankNum": "4",
+          "BranchNum": "5059",
+          "MaskedAccountNum": "***4567",
+          "Key": "2d59e245-8f3d-4767-9118-c652e7b24b4f"
+        },
+        "Name": "Every Day Chequing 1",
+        "AlternativeName": "My Chequing Account",
+        "StatusCd": "0",
+        "StatusDt": "2010-06-01",
+        "OpenDt": "1960-01-01",
+        "CurrencyCd": "CAD",
+        "BalanceAmt": "$1000.00",
+        "AvailableBalanceAmt": "$1500.00",
+        "OverdraftProtectionLimitAmt": "$500.00",
+        "StatementMailTypeCd": "eStatement",
+        "LastTransactionDt": "2014-09-01"
+      },
+      {
+        "id": 2,
+        "DemandDepositId": "1d27d8aa-09c0-4ff1-a572-8a89bfbd1874",
+        "AltKey": {
+          "BankNum": "4",
+          "BranchNum": "5059",
+          "MaskedAccountNum": "***4567",
+          "Key": "2d59e245-8f3d-4767-9118-c652e7b24b4f"
+        },
+        "Name": "Every Day Chequing 2",
+        "AlternativeName": "My Chequing Account",
+        "StatusCd": "0",
+        "StatusDt": "2010-06-01",
+        "OpenDt": "1960-01-01",
+        "CurrencyCd": "CAD",
+        "BalanceAmt": "$1000.00",
+        "AvailableBalanceAmt": "$1500.00",
+        "OverdraftProtectionLimitAmt": "$500.00",
+        "StatementMailTypeCd": "eStatement",
+        "LastTransactionDt": "2014-09-01"
+      },
+      {
+        "id": 3,
+        "DemandDepositId": "0d077dc9-01dc-4d35-abe4-c2b06ac25d39",
+        "AltKey": {
+          "BankNum": "4",
+          "BranchNum": "5059",
+          "MaskedAccountNum": "***4567",
+          "Key": "2d59e245-8f3d-4767-9118-c652e7b24b4f"
+        },
+        "Name": "Every Day Chequing 3",
+        "AlternativeName": "My Chequing Account",
+        "StatusCd": "0",
+        "StatusDt": "2010-06-01",
+        "OpenDt": "1960-01-01",
+        "CurrencyCd": "CAD",
+        "BalanceAmt": "$30000.00",
+        "AvailableBalanceAmt": "$35000.00",
+        "OverdraftProtectionLimitAmt": "$500.00",
+        "StatementMailTypeCd": "eStatement",
+        "LastTransactionDt": "2014-09-01"
+      },
+      {
+        "id": 4,
+        "DemandDepositId": "1d27d8aa-09c0-4ff1-a572-8a89bfbd1875",
+        "AltKey": {
+          "BankNum": "4",
+          "BranchNum": "5059",
+          "MaskedAccountNum": "***4567",
+          "Key": "2d59e245-8f3d-4767-9118-c652e7b24b4f"
+        },
+        "Name": "Every Day Chequing 4",
+        "AlternativeName": "My Chequing Account",
+        "StatusCd": "0",
+        "StatusDt": "2010-06-01",
+        "OpenDt": "1960-01-01",
+        "CurrencyCd": "CAD",
+        "BalanceAmt": "$40000.00",
+        "AvailableBalanceAmt": "$45000.00",
+        "OverdraftProtectionLimitAmt": "$500.00",
+        "StatementMailTypeCd": "eStatement",
+        "LastTransactionDt": "2014-09-01"
+      },
+      {
+        "id": 5,
+        "DemandDepositId": "0d077dc9-01dc-4d35-abe4-c2b06ac25d40",
+        "AltKey": {
+          "BankNum": "4",
+          "BranchNum": "5059",
+          "MaskedAccountNum": "***4567",
+          "Key": "2d59e245-8f3d-4767-9118-c652e7b24b4f"
+        },
+        "Name": "Every Day Chequing 5",
+        "AlternativeName": "My Chequing Account",
+        "StatusCd": "0",
+        "StatusDt": "2010-06-01",
+        "OpenDt": "1960-01-01",
+        "CurrencyCd": "CAD",
+        "BalanceAmt": "$50000.00",
+        "AvailableBalanceAmt": "$55000.00",
+        "OverdraftProtectionLimitAmt": "$500.00",
+        "StatementMailTypeCd": "eStatement",
+        "LastTransactionDt": "2014-09-01"
+      }
+    ]
+}

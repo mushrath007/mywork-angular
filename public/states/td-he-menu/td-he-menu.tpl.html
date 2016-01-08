@@ -523,3 +523,11 @@
         </div>
     </div>
 </div>
+
+
+<h3 ng-class="{'td-collapse-icon':!isCollapsed8, 'td-expand-icon':isCollapsed8}" ng-click="isCollapsed8 = !isCollapsed8">UI States</h3>
+<div uib-collapse="isCollapsed8" ng-show="isCollapsed8">
+    <div ng-controller="UIStatesController">
+        Test
+    </div>
+</div>
