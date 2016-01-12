@@ -375,7 +375,7 @@
 <h3 ng-class="{'td-collapse-icon':!isCollapsed6, 'td-expand-icon':isCollapsed6}" ng-click="isCollapsed6 = !isCollapsed6">RestFUL Services</h3>
 <div uib-collapse="isCollapsed6" ng-show="isCollapsed6">
     <div ng-controller="ContactController">
-        <form class="well row" name="myForm">
+        <form class="well row" name="myForm" novalidate>
             <div class="col-md-12">
                 <div data-td-ui-form-group="Name">
                     <input type="text" name="name" placeholder="Name" ng-model="newcontact.name" ng-required="true"/>
@@ -525,9 +525,29 @@
 </div>
 
 
-<h3 ng-class="{'td-collapse-icon':!isCollapsed8, 'td-expand-icon':isCollapsed8}" ng-click="isCollapsed8 = !isCollapsed8">UI States</h3>
-<div uib-collapse="isCollapsed8" ng-show="isCollapsed8">
-    <div ng-controller="UIStatesController">
-        Test
+<div ng-click="reload1();">
+    <h3 ng-class="{'td-collapse-icon':!isCollapsed8, 'td-expand-icon':isCollapsed8}" ng-click="isCollapsed8 = !isCollapsed8;">Deffered ,$q && Promise</h3>
+    <div uib-collapse="isCollapsed8" ng-show="isCollapsed8">
+        <div ng-controller="DqpController">
+            <div ng-bind="'Promise1: ' + Promise1"></div>
+            <div ng-bind="'Promise2: ' + Promise2"></div>
+            <div ng-bind="'Promise3: ' + Promise3"></div>
+            <div ng-bind="'Promise4: ' + Promise4"></div>
+            <div ng-bind="'Promise5: ' + Promise5"></div><br />
+            <div ng-bind="'Status1: ' + Status1"></div>
+            <div ng-bind="'Status2: ' + Status2"></div>
+
+            <div>{{result}} ({{notify}})</div>
+            <div class="progress" ng-hide="notifybar == 100">
+                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                     aria-valuenow="{{notifybar}}" aria-valuemin="0" aria-valuemax="100" style="width:{{notifybar}}%">
+                    {{notifybar}}%
+                </div>
+            </div>
+            <br ng-if="notifybar == 100""/>
+            <div ng-show="notifybar == 100">
+                Completed
+            </div>
+        </div>
     </div>
 </div>

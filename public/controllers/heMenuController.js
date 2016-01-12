@@ -480,9 +480,91 @@
 
         }])
 
-        .controller('UIStatesController',['$scope',function($scope){
+        .controller('DqpController',['$scope','$q','$timeout','$window',function($scope, $q, $timeout, $window){
             $scope.isCollapsed8 = true;
 
+            $scope.reload1 =function(){
+                $window.location.reload();
+            };
+
+            // Our promise function with its delay as argument
+            var getPromise = function(delay) {
+                // Creates a Deferred object
+                var deferred = $q.defer();
+                // Number of notifications sent
+                var notifications = 0;
+
+                // For each second in the delay, we will notify the caller
+                for (var i = 0; i <= delay / 1000; i++) {
+                    $timeout(function() {
+                        deferred.notify(notifications++);
+                    }, i * 1000);
+                }
+
+                // Always resolve the promise when the delay is reached
+                $timeout(function() {
+                    deferred.resolve("Success");
+                }, delay);
+
+                // The promise of the deferred task
+                return deferred.promise;
+            };
+
+            // Creates a promise that will last 10 seconds
+            getPromise(10000).then(function(value) {
+                $scope.result = value; // Success callback
+            }, null, function(value) {
+                $scope.result = "Waiting";
+                $scope.notify = value; // Notify callback called each second
+                $scope.notifybar = value * 10;
+            });
+
+            //Second deffered
+
+            function createPromise(name, timeout, willSucceed){
+                $scope[name] = 'Running';
+                var deferred = $q.defer();
+                $timeout(function(){
+                    if(willSucceed){
+                        $scope[name] = 'Completed';
+                        deferred.resolve(name);
+                    }
+                    else{
+                        $scope[name] = 'Failed';
+                        deferred.resolve(name);
+                    }
+                },timeout * 1000);
+                return deferred.promise;
+            }
+
+            var promises = [];
+            var names = [];
+            for (var i = 1; i <=5; i++){
+                var willSucceed = true;
+                if(i == 2 || i==3) willSucceed = false;
+                promises.push(createPromise('Promise' +i, i, willSucceed));
+            }
+
+            $scope.Status1 = 'Waiting';
+            $scope.Status2 = 'Waiting';
+            $q.all(promises).then(
+                function(){
+                    $scope.Status1 = 'Done';
+                },
+                function() {
+                    $scope.Status2 = 'Failed';
+                }
+            ).finally(function(){
+                    $scope.Status2 = 'Done Waiting';
+                })
+
+        }])
+
+
+        .filter('currentdate',['$filter',  function($filter) {
+            return function() {
+                return $filter('date')(new Date(), 'yyyy');
+            };
         }]);
 
 

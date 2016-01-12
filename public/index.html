@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCType html>
 <html ng-app="com.td.oca.examplePersonalDemo">
 <head>
     <meta charset="utf-8">
@@ -13,18 +13,25 @@
     <link rel="stylesheet" href="bower_components/td-ui-responsive-app/styles/style-td-emerald.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/fontawesome-webfont.woff">
+    <link rel="stylesheet" href="styles/jquery-ui.css"/>
+
 
 </head>
 
 <!--[if IE]>
 <body class="ie" data-ng-init="msg='com.td.oca.examplePersonal';">
 <![endif]-->
-<!--[if !IE]><!--->
+<!--[if !IE]><!-->
 <body data-ng-init="msg='com.td.oca.examplePersonal';">
 <!--<![endif]-->
 
 <!--[if lt IE 11]>
 <div data-td-alert-browse-happy></div>
+<![endif]-->
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="styles/ie9custom.css"/>
 <![endif]-->
 <!--<div ng-include="'/tpl/standards-site-secure.html'"></div>-->
 <div data-td-ui-navigation class="td-primary-nav"></div>
