@@ -34,13 +34,29 @@
 <link rel="stylesheet" href="styles/ie9custom.css"/>
 <![endif]-->
 <!--<div ng-include="'/tpl/standards-site-secure.html'"></div>-->
-<div data-td-ui-navigation class="td-primary-nav"></div>
+<!--<div data-td-ui-navigation class="td-primary-nav"></div>-->
+<div class="td-callout pull-right" ng-controller="LoginController">
+    <div ng-if="!loggedUser">
+        <a href="#" ng-click="open()">Login</a>
+    </div>
+    <div ng-if="loggedUser">
+        <div style="display: inline-flex" class="badge">
+            <div ng-bind="UserName"></div>&nbsp;
+            <div>Logged</div>
+        </div>
+        <br/>
+        <a ng-href="/" target="_self" ng-click="logout()">Logout</a>
+    </div>
+</div>
 <div class="td-callout white">
     <div role="main" class="td-callout white" style="border-radius: 15px;margin-top: 30px;">
         <div class="td-container">
             <div class="td-container-sec-deprecated">
                 <div class="td-row">
                     <div class="td-col-lg-12">
+                        <div>
+                            <h2>Welcome!!</h2>
+                        </div>
                         <div data-ui-view></div>
                     </div>
                 </div>
@@ -48,6 +64,7 @@
         </div>
     </div>
 </div>
+
 <div ng-include="'/tpl/footer-lso.html'"></div>
 
 

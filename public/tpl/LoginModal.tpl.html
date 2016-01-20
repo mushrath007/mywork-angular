@@ -1,0 +1,41 @@
+<div ng-controller="LoginController">
+    <!--<div class="modal-header">-->
+        <!--<h3 class="modal-title">Login</h3>-->
+    <!--</div>-->
+    <div class="modal-body">
+        <div ng-if="loginuser">
+        <div style="position:relative; height: 200px;" ng-show="appLoading">
+            <div td-ui-spinner>Loading..</div>
+        </div>
+        <h2>Login</h2>
+        <form name="form" ng-submit="login()" role="form" novalidate>
+
+            <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                <div data-td-ui-form-group="Name">
+                    <input type="name" name="username" id="username" class="form-control" placeholder="Name" ng-model="UserProfile.username" required data-ng-pattern="/^[a-zA-Z0-9 ]+$/" ng-blur="setTouched('name');" />
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                <div data-td-ui-form-group="Password">
+                    <input type="password" name="password" id="password" class="form-control" ng-model="UserProfile.password" required />
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">Login</button>
+                <a href="#" class="btn btn-link"  ng-click="ok()">Close Modal</a>
+            </div>
+            <div ng-show="errorLogin">
+                <div class="alert alert-danger">Username or password is incorrect</div>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>-->
+        <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+    <!--</div>-->
+</div>
