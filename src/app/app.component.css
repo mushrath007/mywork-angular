@@ -1,0 +1,34 @@
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+  background-color: transparent!important;
+}
+
+#page-ang2comp:after {
+  left: 96.5%;
+  border: solid #f3eded00;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: #35cb4096;
+  border-width: 30px;
+  top: -30px;
+}

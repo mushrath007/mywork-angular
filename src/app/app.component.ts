@@ -8,5 +8,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+
+  //constructor(){
+  //  this.loadComponent = false;
+  //  this.showForm = true;
+  //}
+
+  //loadMyChildComponent() {
+  //  console.log('here');
+  //  this.loadComponent = true;
+  //}
+
+  title = 'Mushrath Mohammad Angular Demo';
 }

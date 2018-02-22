@@ -25,8 +25,8 @@ html.js,
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 50vh;
-	padding: 30px;
+	/*height: 50vh;*/
+	/*padding: 30px;*/
 	pointer-events: none;
 	opacity: 0;
 	background: transparent;
@@ -46,12 +46,12 @@ html.js,
 }
 
 .pages-nav__item {
-	width: 33%;
+	/*width: 33%;*/
 	padding: 1em;
 }
 
 .js .pages-nav__item {
-	padding: 0 10%;
+	/*padding: 0 10%;*/
 }
 
 .pages-nav .pages-nav__item--social {
@@ -74,7 +74,7 @@ html.js,
 }
 
 .link {
-	font-size: 0.85em;
+	font-size: 1em;
 	font-weight: bold;
 	position: relative;
 	letter-spacing: 1px;
@@ -145,19 +145,20 @@ html.js,
 	pointer-events: none;
 	-webkit-perspective: 1200px;
 	perspective: 1200px;
-	-webkit-perspective-origin: 50% -50%;
-	perspective-origin: 50% -50%;
+	-webkit-perspective-origin: 50% -200%;
+	perspective-origin: 50% -200%;
 }
 
 .js .page {
 	position: relative;
 	z-index: 5;
-	overflow: hidden;
+	/*overflow: auto;*/
 	width: 100%;
 	height: 100vh;
 	pointer-events: auto;
 	background: #2a2b30;
 	box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 15px;
 }
 
 .js .pages-stack--open .page {
