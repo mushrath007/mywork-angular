@@ -27,24 +27,27 @@
 <!-- pages stack -->
 <div class="pages-stack">
   <!-- page -->
-  <div class="page" id="page-services">
+  <div class="page" id="page-services" data-content="Services">
     <app-services></app-services>
   </div>
-  <div class="page" id="page-aboutme">
+  <div class="page" id="page-aboutme" data-content="About Me">
     <app-about-me></app-about-me>
   </div>
-  <div class="page" id="page-ang2comp">
+  <div class="page" id="page-ang2comp" data-content="Angular2">
     <app-angular-two-forms class="container-fluid"></app-angular-two-forms>
   </div>
-  <div class="page" id="page-home">
+  <div class="page" id="page-home" data-content="Home">
     <app-experiment></app-experiment>
     <!--<ng-datepicker [(ngModel)]="date" [options]="options"></ng-datepicker>-->
   </div>
 
-  <div class="page" id="page-portfolio">
+  <div class="page" id="page-portfolio" data-content="Portfolio">
     <app-portfolio></app-portfolio>
   </div>
 </div>
 <!-- /pages-stack -->
 <button class="menu-button"><span>Menu</span></button>
+<button class="float">
+  <span class="fa fa-arrow-left fa-2x my-float"> Click Here !!</span>
+</button>
 
