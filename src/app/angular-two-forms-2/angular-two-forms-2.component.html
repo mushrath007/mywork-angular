@@ -1,0 +1,71 @@
+<div class="container well well-lg">
+  <form [formGroup]="addressForm" novalidate>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-6">
+          <div class="styled-input wide">
+            <input type="text" formControlName="address1">
+            <label>Address</label><span></span>
+          </div>
+          <div class="error-field" *ngIf="addressForm.controls.address1.invalid && addressForm.controls.address1.touched">
+            address1 is required
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="styled-input wide">
+            <input type="text" formControlName="address2">
+            <label>Address 2</label><span></span>
+          </div>
+          <div class="error-field" *ngIf="addressForm.controls.address2.invalid && addressForm.controls.address2.touched">
+            address2 is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-6">
+          <div class="styled-input wide">
+            <input type="text" formControlName="city">
+            <label>City</label><span></span>
+          </div>
+          <div class="error-field" *ngIf="addressForm.controls.city.invalid && addressForm.controls.city.touched">
+            city is required
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="styled-input wide">
+            <input type="text" formControlName="zip">
+            <label>Zip Code</label><span></span>
+          </div>
+          <div class="error-field" *ngIf="addressForm.controls.zip.invalid && addressForm.controls.zip.touched">
+            zip is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-6">
+          <div class="styled-input wide">
+            <select formControlName="state" placeholder="state">
+              <option *ngFor = " let state of stateList" [value] = "state">{{state}}</option>
+            </select>
+            <label>State</label>
+          </div>
+          <div class="error-field" *ngIf="addressForm.controls.state.invalid && addressForm.controls.state.touched">
+            state is required
+          </div>
+        </div>
+        <div class="styled-input wide col-md-6">
+
+        </div>
+      </div>
+    </div>
+    <div class="row pull-right">
+      <div class="col-md-6">
+        <button class="btn btn-primary" [disabled]="addressForm.invalid" (click)="bye()">Thanks</button>
+      </div>
+    </div>
+  </form>
+</div>

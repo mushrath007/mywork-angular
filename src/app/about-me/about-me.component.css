@@ -1,0 +1,162 @@
+.about .about-header {
+  margin: 60px 0 0 0;
+  background: url('/assets/images/myImage2.jpg');
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  border-bottom: 0;
+  padding: 128px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 15px;
+}
+.about .about-header:before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-1;
+  -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg)
+  translate(-14px,20px)
+  skew(-20deg);
+}
+
+.about .about-header:after{
+  content: '';
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-1;
+  display: inline-block;
+  -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg)
+  translate(20px,25px)
+  skew(20deg);
+}
+.about .about-header h1 {
+  font-size: 3em;
+  line-height: 2;
+  font-weight: 200;
+  font-style: italic;
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 0;
+}
+.about .about-header p {
+  font-size: 1.5em;
+  font-weight: 200;
+  text-transform: capitalize;
+  color: white;
+}
+.about .about-skills {
+  margin-bottom: 10px;
+}
+.about .about-skills h1 {
+  font-size: 2em;
+  line-height: 2;
+  font-weight: 200;
+  font-style: italic;
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 0;
+}
+.about .about-body {
+  padding: 0 30px;
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+}
+.about-body img {
+  width: 10%;
+  text-align: center;
+  margin: -50px auto 0;
+  text-align-last: center;
+  border-radius: 50%;
+}
+.about .about-body p {
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+}
+.about .about-body .about-list {
+  padding-top: 15px;
+  color: #008f68;
+}
+.about .about-body .about-list li.list-group-item {
+  border: none !important;
+}
+.about .about-body .about-list li i {
+  padding: 0 15px 0 0;
+}
+.about .about-skills-section {
+  padding: 30px;
+  margin: 40px 0;
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+}
+.about .about-skills-section .text-center:hover i, .about .about-skills-section .text-center:hover h4 {
+  color: rgba(107, 183, 86, .95) !important;
+}
+.about .about-skills-section .text-center p {
+  font-size: 1em;
+  font-weight: 200;
+  color: #000 !important;
+  word-break: break-all;
+}
+.about .about-skills-section .text-center h4 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.about .about-skills-section .text-center h4:hover {
+  color: rgba(107, 183, 86, .95) !important;
+}
+.about .about-skills-section .carousel.slide {
+  padding: 0 60px;
+}
+.about .about-skills-section .carousel.slide .carousel-control.left, .about .about-skills-section .carousel.slide .carousel-control.right {
+  background-image: none;
+  position: absolute;
+  top: 30px;
+  height: 40px;
+  background: #6bb756;
+  width: 30px;
+  cursor: pointer;
+  outline: none;
+  padding: 4px;
+}
+.about .about-skills-section .carousel.slide .carousel-inner .item img {
+  height: 100px !important;
+}
+.about .about-skills-section .carousel.slide .carousel-inner .item .empty-space {
+  margin-bottom: 30px;
+  display: block;
+  overflow: hidden;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .about .about-skills-section .carousel.slide {
+    padding: 0 30px;
+  }
+  .about .about-skills-section .carousel.slide .carousel-control.left, .about .about-skills-section .carousel.slide .carousel-control.right {
+    top: 225px;
+  }
+  .about .about-skills-section .carousel.slide .carousel-inner .item img {
+    margin: 0 auto;
+  }
+}
+.font-120 {
+  font-size: 120px;
+}
+.items i {
+  font-size: 120px;
+  padding: 20px;
+  margin: 20px;
+}
+

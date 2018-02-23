@@ -1,0 +1,80 @@
+<div *ngIf="showForm" class="angular2-component margin-top-60">
+  <div class="container well well-lg">
+    <h1>Angular2 Forms Validation</h1><br/>
+    <form [formGroup]="basicForm" novalidate>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-6">
+            <div class="styled-input wide">
+              <input type="text" formControlName="firstName" [pattern]="'^[-a-zA-Z ]*$'">
+              <label>First Name</label><span></span>
+            </div>
+            <div class="error-field" *ngIf="basicForm.controls.firstName.invalid && basicForm.controls.firstName.touched">
+              First name is required
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="styled-input wide">
+              <input type="text" formControlName="LastName" [pattern]="'^[-a-zA-Z ]*$'">
+              <label>Last Name</label><span></span>
+            </div>
+            <div class="error-field" *ngIf="basicForm.controls.LastName.invalid && basicForm.controls.LastName.touched">
+              Last Name is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-6">
+            <div class="styled-input wide">
+              <input type="text" formControlName="phoneNumber" [pattern]="'^[0-9]{10}$'">
+              <label>Phone Number</label><span></span>
+            </div>
+            <div class="error-field" *ngIf="basicForm.controls.phoneNumber.invalid && basicForm.controls.phoneNumber.touched">
+              Phone Number is required
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="styled-input wide">
+              <input type="text" formControlName="email" [pattern]="'^[a-zA-Z0-9]+[-a-zA-Z0-9._]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,6}$'">
+              <label>Email Address</label><span></span>
+            </div>
+            <div class="error-field" *ngIf="basicForm.controls.email.invalid && basicForm.controls.email.touched">
+              Email Address is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-6">
+            <div class="styled-input wide">
+              <select formControlName="gender" placeholder="Gender">
+                <option *ngFor = " let gender of genderList" [value] = "gender">{{gender}}</option>
+              </select>
+              <label>Gender</label>
+            </div>
+            <div class="error-field" *ngIf="basicForm.controls.gender.invalid && basicForm.controls.gender.touched">
+              Gender is required
+            </div>
+          </div>
+          <div class="styled-input wide col-md-6">
+
+          </div>
+        </div>
+      </div>
+      <div class="row pull-right">
+        <div class="col-md-6">
+          <button class="btn btn-primary" [disabled]="basicForm.invalid" (click)="loadMyChildComponent()">Submit</button>
+        </div>
+      </div>
+    </form>
+    <p>Form value: {{ basicForm.value | json }}</p>
+    <p>Form status: {{ basicForm.status | json }}</p>
+  </div>
+
+  <div *ngIf="loadComponent">
+    <app-angular-two-forms-2 class="container-fluid"></app-angular-two-forms-2>
+  </div>
+</div>

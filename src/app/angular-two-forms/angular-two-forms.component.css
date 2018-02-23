@@ -1,0 +1,181 @@
+.container {
+  color: #333333e3;
+}
+.angular2-component{
+  margin: 60px 0 0 0;
+}
+.error-field{
+  font-size: 75%;
+  margin-top: .54166667em;
+  top: calc(100% - 1.66666667em);
+  color: red;
+}
+
+.styled-input {
+  float: left;
+  width: 33.3333%;
+  margin: 2rem 0 0.5rem;
+  position: relative;
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide { width: 100%; }
+
+input,
+textarea, select {
+  padding: 1rem 1rem;
+  border: 0;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+input ~ span,
+textarea ~ span ,select ~ span {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #8e44ad;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+input:focus,
+textarea:focus, select:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span , select:focus ~span{
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+input:focus ~ label, textarea:focus ~ label, select:focus ~ label {
+  font-size: 1.5em;
+  color: #8e44ad;
+  top: -3.25rem;
+  padding: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+input.ng-touched ~ label, textarea.ng-touched ~ label, select.ng-touched ~ label {
+  font-size: 1.5em;
+  color: #8e44ad;
+  top: -3.25rem;
+  padding: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+/* Label float sample css
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the
+* pesky delay.
+*/
+/*label, input, select {*/
+/*transition: all 0.2s;*/
+/*touch-action: manipulation;*/
+/*}*/
+
+/*input{*/
+/*font-size: 1.5em;*/
+/*border: 0;*/
+/*border-bottom: 1px solid #ccc;*/
+/*font-family: inherit;*/
+/*-webkit-appearance: none;*/
+/*border-radius: 0;*/
+/*padding: 0;*/
+/*cursor: text;*/
+/*color: black;*/
+/*}*/
+
+/*select{*/
+/*font-size: 1.5em;*/
+/*border: 0;*/
+/*border-bottom: 1px solid #ccc;*/
+/*font-family: inherit;*/
+/*-webkit-appearance: none;*/
+/*border-radius: 0;*/
+/*padding: 0;*/
+/*color: black;*/
+/*}*/
+
+/*input:focus, select:focus {*/
+/*outline: 0;*/
+/*border-bottom: 1px solid #666;*/
+/*}*/
+
+/*label {*/
+/*letter-spacing: 0.05em;*/
+/*margin-bottom: -10px;*/
+/*margin-left: 5px;*/
+/*}*/
+/*!***/
+/** Translate down and scale the label up to cover the placeholder,*/
+/** when following an input (with placeholder-shown support).*/
+/** Also make sure the label is only on one row, at max 2/3rds of the*/
+/** field—to make sure it scales properly and doesn't wrap.*/
+/**!*/
+/*input:placeholder-shown + label ,select:placeholder-shown + label{*/
+/*cursor: text;*/
+/*max-width: fit-content;*/
+/*white-space: nowrap;*/
+/*overflow: hidden;*/
+/*text-overflow: ellipsis;*/
+/*transform-origin: left bottom;*/
+/*transform: translate(0, 2.125rem) scale(1.5);*/
+/*}*/
+/*!***/
+/** By default, the placeholder should be transparent. Also, it should*/
+/** inherit the transition.*/
+/**!*/
+/*::-webkit-input-placeholder {*/
+/*opacity: 0;*/
+/*transition: inherit;*/
+/*}*/
+/*!***/
+/** Show the placeholder when the input is focused.*/
+/**!*/
+/*input:focus::-webkit-input-placeholder,select:focus::-webkit-input-placeholder {*/
+/*opacity: 1;*/
+/*}*/
+/*!***/
+/** When the element is focused, remove the label transform.*/
+/** Also, do this when the placeholder is _not_ shown, i.e. when*/
+/** there's something in the input at all.*/
+/**!*/
+/*input:not(:placeholder-shown) + label,*/
+/*input:focus + label ,select:not(:placeholder-shown) + label,*/
+/*select:focus + label {*/
+/*transform: translate(0, 0) scale(1);*/
+/*cursor: pointer;*/
+/*margin-bottom: 0;*/
+/*margin-left: 0;*/
+/*}*/
+
+

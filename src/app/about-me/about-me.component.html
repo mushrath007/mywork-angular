@@ -1,0 +1,55 @@
+<div class="container margin-top-60">
+  <div class="row about margin-bottom-50">
+    <div class="col-lg-12 col-md-12 text-center about-header">
+    </div>
+    <div class="col-md-12 about-body">
+      <img class="img-responsive" src="assets/images/Mushrath.jpg"/>
+      <p>I'm Mushrath Mohammad.</p>
+      <p>I'm a passionate UI Developer and Front-End Developer creating modern and responsive design for Web and
+        Mobile.</p>
+      <ul class="list-group about-list">
+        <li class="list-group-item">
+          <i class="fa fa-circle" aria-hidden="true"></i> 7+ years of IT experience in analysis, design, development,
+          testing, Implementation and Software Migration techniques of web application.
+        </li>
+        <li class="list-group-item">
+          <i class="fa fa-circle" aria-hidden="true"></i> Experienced in web-based GUIs development using HTML5, CSS3,
+          Twitter Bootstrap, SASS/SCSS, AngularJS, Angular2, Angular Material, Java Script, JQuery, Ionic, Node JS and
+          JSON object.
+        </li>
+        <li class="list-group-item">
+          <i class="fa fa-circle" aria-hidden="true"></i> Have good knowledge on the framework and Web Based Application
+          for Desktop, Tablet and Mobile.
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-12 col-md-12 text-center about-skills padding-none">
+      <h1>skills & frameworks</h1>
+    </div>
+    <div class="col-md-12 about-skills-section">
+      <div id="container ng2-icons">
+        <div
+          ng2-carouselamos
+          class="slides-wrapper"
+          [items]="items"
+          [width]="900"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item">
+        </div>
+
+        <ng-template #prev>
+          <i class="fa fa-angle-left fa-4 font-120"></i>
+        </ng-template>
+        <ng-template #next>
+          <i class="fa fa-angle-right fa-4 font-120"></i>
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+          <div class="items">
+            <i class="{{ item.name }}"></i>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.services h1 {
+  font-size: 3em;
+  line-height: 2;
+  font-weight: 200;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 0;
+}
+.services p {
+  font-size: 1.5em;
+  font-weight: 200;
+  text-transform: capitalize;
+  color: #fff;
+}
+.services .services-body {
+  padding: 30px;
+  margin: 40px 0;
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  transition: all 0.1s linear;
+}
+.services .services-body button {
+  background-color: #fff !important;
+  border-radius: 8px;
+  color: rgba(0, 143, 104, 0.95);
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  font-size: 1.3em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.services .services-body button:hover {
+  color: #fff !important;
+  background-color: #499c5a !important;
+}
+.services .services-body .text-center:hover i, .services .services-body .text-center:hover h4 {
+  color: rgba(107, 183, 86, .95) !important;
+  transform: translateY(3px);
+}
+.services .services-body .text-center p {
+  font-size: 1em;
+  font-weight: 200;
+  color: #fff !important;
+  word-break: break-all;
+}
+.services .services-body .text-center h4 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.services .services-body .text-center h4:hover {
+  color: rgba(107, 183, 86, .95) !important;
+}
