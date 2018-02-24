@@ -4,6 +4,25 @@ html.js,
 	height: 100vh;
 }
 
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
 /* Pages nav */
 
 .pages-nav {
@@ -169,6 +188,10 @@ html.js,
 	transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
 }
 
+.js .page > div{
+  overflow-y: auto;
+  max-height: 100vh;
+}
 .js .page--inactive {
 	position: absolute;
 	z-index: 0;

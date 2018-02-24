@@ -40,37 +40,184 @@ body {
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .pages-stack{
+    margin: 200px 0 0 0;
+  }
+
+  .page:after  {
+    left: 60%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 40%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
+  .pages-stack{
+    margin: 200px 0 0 0;
+  }
+
+  .page:after  {
+    left: 60%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 40%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
+  .pages-stack{
+    margin: 200px 0 0 0;
+  }
+
+  .page:after  {
+    left: 60%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 40%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Tablets, iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .pages-stack{
+    margin: 100px 0 0 0;
+  }
+  .page:after {
+    left: 92%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 8%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Tablets, iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .pages-stack{
+    margin: 100px 0 0 0;
+  }
+  .page:after {
+    left: 92%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 8%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Tablets, iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .pages-stack{
+    margin: 100px 0 0 0;
+  }
+  .page:after {
+    left: 92%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 8%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
+  .pages-stack{
+    margin: 100px 0 0 0;
+  }
+  .page:after {
+    left: 92%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 8%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
+  .pages-stack{
+    margin: 100px 0 0 0;
+  }
+  .page:after {
+    left: 92%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 8%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  .pages-stack{
+    margin: 200px 0 0 0;
+  }
+  .page:after  {
+    left: 60%;
+    border: solid #f3eded00;
+    content: attr(data-content);
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-color: #32a93a59;
+    border-width: 25px;
+    top: -50px;
+    width: 40%;
+    border-top-left-radius: 25px;
+  }
   /* Styles */
 }

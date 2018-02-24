@@ -1,42 +1,7 @@
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
 
-::-webkit-scrollbar
-{
-  width: 10px;
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb
-{
-  background-color: #000000;
-  border: 2px solid #555555;
-}
 
 .nav>li>a:focus, .nav>li>a:hover{
   background-color: transparent!important;
-}
-
-
-.pages-stack{
-  margin: 70px 0 0 0;
-}
-
-.page:after {
-  left: 92%;
-  border: solid #f3eded00;
-  content: attr(data-content);
-  height: 0;
-  width: 0;
-  position: fixed;
-  border-color: #32a93a59;
-  border-width: 25px;
-  top: -50px;
-  width: 8%;
-  border-top-left-radius: 25px;
 }
 
 .float{
