@@ -15,11 +15,12 @@
                   <img src="{{metadata.iconPath}}" alt="{{metadata.title}}" />
                   <figcaption>
                     <div>
-                      <h2>{{metadata.title}}
+                      <h4>{{metadata.title}}
                         <a href="{{metadata.GitHref}}" *ngIf="metadata.gitlinkShow" target="_blank">
                           <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                         </a>
-                      </h2>
+                      </h4>
+                      <p>{{metadata.technology}}</p>
                     </div>
                   </figcaption>
                 </figure>

@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2015, Codrops
  * http://www.codrops.com
  */
@@ -41,6 +41,10 @@
 		current = 0,
 		// menu button
 		menuCtrl = document.querySelector('button.menu-button'),
+
+    clickCtrl = document.querySelector('button.click-here'),
+
+    bodyCtrl = document.querySelector('body'),
 		// the navigation wrapper
 		nav = document.querySelector('.pages-nav'),
 		// the menu nav items
@@ -72,7 +76,7 @@
 				else {
 					// invisible pages in the stack
 					page.style.WebkitTransform = 'translate3d(0,75%,-300px)';
-					page.style.transform = 'translate3d(0,75%,-300px)';		
+					page.style.transform = 'translate3d(0,75%,-300px)';
 				}
 			}
 			else {
@@ -80,7 +84,7 @@
 			}
 
 			page.style.zIndex = i < current ? parseInt(current - i) : parseInt(pagesTotal + current - i);
-			
+
 			if( posIdx !== -1 ) {
 				page.style.opacity = parseFloat(1 - 0.1 * posIdx);
 			}
@@ -94,6 +98,8 @@
 	function initEvents() {
 		// menu button click
 		menuCtrl.addEventListener('click', toggleMenu);
+
+    clickCtrl.addEventListener('click', toggleMenu);
 
 		// navigation menu clicks
 		navItems.forEach(function(item) {
@@ -118,7 +124,7 @@
 
 		// keyboard navigation events
 		document.addEventListener( 'keydown', function( ev ) {
-			if( !isMenuOpen ) return; 
+			if( !isMenuOpen ) return;
 			var keyCode = ev.keyCode || ev.which;
 			if( keyCode === 27 ) {
 				closeMenu();
@@ -140,7 +146,11 @@
 	// opens the menu
 	function openMenu() {
 		// toggle the menu button
-		classie.add(menuCtrl, 'menu-button--open')
+		classie.add(menuCtrl, 'menu-button--open');
+
+    classie.add(clickCtrl, 'hide');
+    classie.add(bodyCtrl, 'overflow_style');
+
 		// stack gets the class "pages-stack--open" to add the transitions
 		classie.add(stack, 'pages-stack--open');
 		// reveal the menu
@@ -183,9 +193,11 @@
 		if( id ) {
 			current = futureCurrent;
 		}
-		
+
 		// close menu..
 		classie.remove(menuCtrl, 'menu-button--open');
+    classie.remove(clickCtrl, 'hide');
+    classie.remove(bodyCtrl, 'overflow_style');
 		classie.remove(nav, 'pages-nav--open');
 		onEndTransition(futurePage, function() {
 			classie.remove(stack, 'pages-stack--open');
@@ -217,7 +229,7 @@
 	}
 
 	init();
-	
+
 	//changes to a page such as id="page-manuals" without opening the menu and preserving menu transition functionality
 	window.openPageNoTransition = function(id){
 
@@ -239,4 +251,11 @@
 
 		buildStack();
 	}
+
 })(window);
+
+
+$(document).ready(function(e) {
+  var h = $('nav').height() + 20;
+  $('body').animate({ paddingTop: h });
+});

@@ -13,6 +13,7 @@
   /* padding: 0; */
   /* cursor: pointer; */
   border: none;
+  pointer-events: none;
   outline: none;
   background: transparent;
   transition: 2s;

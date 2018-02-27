@@ -1,3 +1,6 @@
+.portfolio{
+  margin-bottom: 100px;
+}
 .portfolio h1 {
   font-size: 3em;
   line-height: 2;
@@ -78,7 +81,15 @@
   transform: translate3d(-40px, 0, 0);
 }
 .portfolio figure.effect-lily figcaption {
+  display: none;
+}
+.portfolio figure.effect-lily:hover figcaption{
   text-align: left;
+  display: block;
+}
+.portfolio figure.effect-lily figcaption div > p{
+  font-size: 12px;
+  font-weight: bold;
 }
 .portfolio figure.effect-lily figcaption > div {
   position: absolute;

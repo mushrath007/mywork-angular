@@ -1,15 +1,14 @@
 .about .about-header {
   margin: 60px 0 0 0;
-  background: url('/assets/images/myImage2.jpg');
+  background: url('/assets/images/bkgimg.jpg');
   -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
   -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
   box-shadow: 0px 0px 28px rgba(0,0,0,.3);
   border-bottom: 0;
   padding: 128px;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-left-radius: 15px;
 }
 .about .about-header:before{
   content: '';

@@ -4,6 +4,13 @@ html.js,
 	height: 100vh;
 }
 
+.hide{
+  display: none;
+}
+
+.nav-menu-list-right{
+  display: inline-flex;
+}
 
 ::-webkit-scrollbar-track
 {
@@ -21,6 +28,11 @@ html.js,
 {
   background-color: #000000;
   border: 2px solid #555555;
+}
+
+.overflow_style{
+  overflow: auto!important;
+  position: relative;
 }
 
 /* Pages nav */
@@ -71,6 +83,10 @@ html.js,
 
 .js .pages-nav__item {
 	/*padding: 0 10%;*/
+}
+
+.pages-stack--open{
+  /*margin: 100px 0 0 0;*/
 }
 
 .pages-nav .pages-nav__item--social {
@@ -164,8 +180,8 @@ html.js,
 	pointer-events: none;
 	-webkit-perspective: 1200px;
 	perspective: 1200px;
-	-webkit-perspective-origin: 50% -200%;
-	perspective-origin: 50% -200%;
+	-webkit-perspective-origin: 50% -250%;
+	perspective-origin: 50% -250%;
 }
 
 .js .page {
@@ -305,7 +321,7 @@ html.js,
 		margin: 0 0 0 50%;
 	}
 	.pages-nav__item {
-		width: 50%;
+		width: initial;
 		min-height: 20px;
 	}
 	.link--page {
@@ -341,6 +357,9 @@ html.js,
 		right: 10px;
 		left: auto;
 	}
+  .click-here{
+    display: none;
+  }
 	.info {
 		font-size: 0.85em;
 	}
