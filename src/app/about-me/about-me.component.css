@@ -65,7 +65,11 @@
   margin-bottom: 0;
 }
 .about .about-body {
-  padding: 0 30px;
+  background-color: #fff;
+  background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+  padding: 30px;
   -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
   -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
   box-shadow: 0px 0px 28px rgba(0,0,0,.3);
@@ -73,22 +77,35 @@
 .about-body img {
   width: 10%;
   text-align: center;
-  margin: -50px auto 0;
+  margin: -75px auto 0;
   text-align-last: center;
   border-radius: 50%;
 }
-.about .about-body p {
+
+.about-me-image{
+  background: url(/assets/images/aboutme-bg.png);
+  min-height: 260px;
+  padding: 20px 0 100px;
+  color: #fbfaf8;
+  display: block;
+  background-size: contain;
+  position: relative;
+  top: -170px;
+  left: 28px;
+}
+.about .about-body .about-me-content ,.about-me-content1,.about-me-content2,.about-me-content3 {
   font-size: 20px;
-  font-weight: 200;
-  color: white;
+  font-weight: bold;
+  color: black;
   text-align: center;
 }
 .about .about-body .about-list {
   padding-top: 15px;
-  color: #008f68;
+  color: black;
 }
 .about .about-body .about-list li.list-group-item {
   border: none !important;
+  background: transparent;
 }
 .about .about-body .about-list li i {
   padding: 0 15px 0 0;
@@ -159,3 +176,217 @@
   margin: 20px;
 }
 
+/* Portoflio Example css */
+
+
+ .mushrath-profile-pic-thumb, #MyWorksScreen span.works-zoom-icon {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out
+}
+
+.mushrath-profile-pic-grid-container{
+  width: 220px;
+  height: 220px;
+  display: block;
+  position: relative;
+  margin: -50px auto 0;
+  text-align: center;
+  text-align-last: center;
+}
+
+.mushrath-profile-pic-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%
+}
+
+.mushrath-profile-pic-grid:after, #AboutScreen .mushrath-profile-pic-item:before {
+  content: '';
+  display: table
+}
+
+.mushrath-profile-pic-grid:after {
+  clear: both
+}
+
+.mushrath-profile-pic-grid li {
+  width: 220px;
+  height: 220px;
+  display: inline-block;
+  margin: 20px
+}
+
+.mushrath-profile-pic-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+}
+
+.mushrath-profile-pic-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, .5);
+  -webkit-transform-origin: 95% 40%;
+  -moz-transform-origin: 95% 40%;
+  -o-transform-origin: 95% 40%;
+  -ms-transform-origin: 95% 40%;
+  transform-origin: 95% 40%;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+
+.mushrath-profile-pic-thumb:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  top: 40%;
+  left: 95%;
+  margin: -4px 0 0 -4px;
+  background: #0e0e0e;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14, 14, 14, 1) 0, rgba(125, 126, 125, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, rgba(14, 14, 14, 1)), color-stop(100%, rgba(125, 126, 125, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14, 14, 14, 1) 0, rgba(125, 126, 125, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(14, 14, 14, 1) 0, rgba(125, 126, 125, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(14, 14, 14, 1) 0, rgba(125, 126, 125, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14, 14, 14, 1) 0, rgba(125, 126, 125, 1) 100%);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .9)
+}
+
+.mushrath-profile-pic-img-1 {
+  background-image: url('/assets/images/Mushrath.jpg');
+  z-index: 12;
+  background-position: center;
+  background-size: contain;
+}
+
+.mushrath-profile-pic-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #c9512e;
+  box-shadow: inset 0 0 0 5px rgba(0, 0, 0, .05);
+}
+
+.mushrath-profile-pic-info h3 {
+  font: 400 16px/130% 'Open Sans Condensed', 'Arial Narrow', serif;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+  margin: 0 60px;
+  padding: 22px 0 0;
+  height: 80px;
+  text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, .3)
+}
+
+.mushrath-profile-pic-info p {
+  padding: 8px 5px;
+  margin: 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  font: italic 300 12px/130% 'Open Sans Condensed', 'Arial Narrow', serif;
+  color: #fff;
+  box-shadow: none;
+  letter-spacing: 2px
+}
+
+.mushrath-profile-pic-info p a span {
+  width: 48px;
+  height: 48px;
+  display: block;
+  font-size: 0;
+  background: url('/assets/images/linkedin.png') no-repeat;
+  margin: 0 0 0 15px
+}
+
+.mushrath-profile-pic-info p a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  font-size: 0;
+  padding-top: 17px;
+  margin: 7px auto 0;
+  opacity: 0;
+  outline: 0;
+  -webkit-transition: -webkit-transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s, background .2s linear 0s;
+  -moz-transition: -moz-transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s, background .2s linear 0s;
+  -o-transition: -o-transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s, background .2s linear 0s;
+  -ms-transition: -ms-transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s, background .2s linear 0s;
+  transition: transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s, background .2s linear 0s;
+  -webkit-transform: translateX(60px) rotate(90deg);
+  -moz-transform: translateX(60px) rotate(90deg);
+  -o-transform: translateX(60px) rotate(90deg);
+  -ms-transform: translateX(60px) rotate(90deg);
+  transform: translateX(60px) rotate(90deg);
+  -webkit-backface-visibility: hidden
+}
+
+#MySkilsWrapper .skills li, #toggle {
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px
+}
+
+.mushrath-profile-pic-info p a:hover {
+  background: rgba(255, 255, 255, .5);
+  font-size: 0;
+  color: #fff
+}
+
+.mushrath-profile-pic-item:hover .mushrath-profile-pic-thumb {
+  /* box-shadow:inset 0 0 0 10px rgba(255,255,255,.5),0 1px 3px rgba(0,0,0,.2); */
+  -webkit-transform: rotate(-110deg);
+  -moz-transform: rotate(-110deg);
+  -o-transform: rotate(-110deg);
+  -ms-transform: rotate(-110deg);
+  transform: rotate(-110deg);
+}
+
+.mushrath-profile-pic-item:hover .mushrath-profile-pic-info p a {
+  opacity: 1;
+  -webkit-transform: translateX(0) rotate(0);
+  -moz-transform: translateX(0) rotate(0);
+  -o-transform: translateX(0) rotate(0);
+  -ms-transform: translateX(0) rotate(0);
+  transform: translateX(0) rotate(0)
+}
+
+
+/* type write */
+.typewriter p, .typewriter span {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  //white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 10s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent; }
+}

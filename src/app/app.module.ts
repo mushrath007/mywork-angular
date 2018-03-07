@@ -21,6 +21,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LibraryModule } from './lib/lib.module';
 import { ServicesComponent } from './services/services.component';
+import * as Typed from 'typed.js';
+
 
 @NgModule({
   imports: [
