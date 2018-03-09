@@ -3,7 +3,7 @@
     <div class="col-lg-12 col-md-12 text-center about-header">
       <app-experiment></app-experiment>
     </div>
-    <div class="col-md-12 about-body typewriter">
+    <div class="col-md-12 about-body">
       <div class="mushrath-profile-pic-grid-container">
         <div class="mushrath-profile-pic-item">
           <div class="mushrath-profile-pic-info">
@@ -17,16 +17,37 @@
           <div class="mushrath-profile-pic-thumb mushrath-profile-pic-img-1"></div>
         </div>
       </div>
-      <!--<div class="about-me-image"></div>-->
-      <div class="about-me-content1"></div>
-      <div class="about-me-content2"></div>
-      <div class="about-me-content3"></div>
-      <ul class="list-group about-list">
-        <li class="list-group-item list-group-item1"></li>
-        <li class="list-group-item list-group-item2"></li>
-        <li class="list-group-item list-group-item3"></li>
-        <li class="list-group-item list-group-item4"></li>
-      </ul>
+
+      <article class="envelope-container">
+        <input type="radio" [(ngModel)]="envelopeOnOff" name="switch" id="switch-on" class="switch-on" value="true" [checked]="options">
+        <div class="envelope">
+          <label for="switch-on">
+            <span class="triangle cap"></span>
+            <div class="notification waiting">
+              <span class="number">Click Here</span>
+            </div>
+            <span class="triangle bag"></span>
+            <span class="triangle tail"></span>
+          </label>
+        </div>
+        <div class="title">
+          <input type="radio" [(ngModel)]="envelopeOnOff" name="switch" id="switch-off" class="switch-off" value="false" [checked]="!options">
+          <label for="switch-off">Close About Me</label>
+        </div>
+        <div class="overlay"></div>
+        <div class="about-me-content-container">
+          <div class="about-me-content1"></div>
+          <div class="about-me-content2"></div>
+          <div class="about-me-content3"></div>
+          <ul class="list-group about-list">
+            <li class="list-group-item list-group-item1"></li>
+            <li class="list-group-item list-group-item2"></li>
+            <li class="list-group-item list-group-item3"></li>
+            <li class="list-group-item list-group-item4"></li>
+          </ul>
+        </div>
+      </article>
+
       <div class="about-me-resume pull-right">
         <a href="#" class="btn btn-success btn-lg">
           <span class="glyphicon glyphicon-download"></span> Download my resume

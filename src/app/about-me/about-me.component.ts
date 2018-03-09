@@ -40,14 +40,16 @@ export class AboutMeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadInfo();
+  }
 
-
+  loadInfo(){
     let profileInfo = ["Mushrath Mohammad.", "Senior UI Developer at TD.", "I'm a passionate Front-End Developer creating modern and responsive design for Web and Mobile."];
 
     profileInfo.forEach(function (value, i) {
       let options = {
         strings: [profileInfo[i]],
-        typeSpeed: 30,
+        typeSpeed: 0,
         showCursor: false,
         smartBackspace: true
       };
@@ -64,7 +66,7 @@ export class AboutMeComponent implements OnInit {
     profileInfoList.forEach(function (value, i) {
       let options = {
         strings: [profileInfoList[i]],
-        typeSpeed: 10,
+        typeSpeed: 0,
         showCursor: false,
         smartBackspace: true
       };
@@ -72,7 +74,6 @@ export class AboutMeComponent implements OnInit {
       new Typed(".list-group-item"+(i+1), options);
 
     });
-
   }
 
 }
