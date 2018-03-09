@@ -19,7 +19,7 @@
       </div>
 
       <article class="envelope-container">
-        <input type="radio" [(ngModel)]="envelopeOnOff" name="switch" id="switch-on" class="switch-on" value="true" [checked]="options">
+        <input type="radio" name="switch" id="switch-on" class="switch-on" value="true">
         <div class="envelope">
           <label for="switch-on">
             <span class="triangle cap"></span>
@@ -31,7 +31,7 @@
           </label>
         </div>
         <div class="title">
-          <input type="radio" [(ngModel)]="envelopeOnOff" name="switch" id="switch-off" class="switch-off" value="false" [checked]="!options">
+          <input type="radio" name="switch" id="switch-off" class="switch-off" value="false">
           <label for="switch-off">Close About Me</label>
         </div>
         <div class="overlay"></div>
@@ -49,7 +49,7 @@
       </article>
 
       <div class="about-me-resume pull-right">
-        <a href="#" class="btn btn-success btn-lg">
+        <a href="#" class="btn btn-success btn-lg pull-right">
           <span class="glyphicon glyphicon-download"></span> Download my resume
         </a>
       </div>
