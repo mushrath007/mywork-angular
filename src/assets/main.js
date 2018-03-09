@@ -155,6 +155,8 @@
 		classie.add(stack, 'pages-stack--open');
 		// reveal the menu
 		classie.add(nav, 'pages-nav--open');
+    var h = $('nav').height() + 20;
+    $('body').animate({ paddingTop: h });
 
 		// now set the page transforms
 		var stackPagesIdxs = getStackPagesIdxs();
@@ -199,6 +201,7 @@
     classie.remove(clickCtrl, 'hide');
     classie.remove(bodyCtrl, 'overflow_style');
 		classie.remove(nav, 'pages-nav--open');
+    $('body').animate({ paddingTop: 0 });
 		onEndTransition(futurePage, function() {
 			classie.remove(stack, 'pages-stack--open');
 			// reorganize stack
@@ -256,6 +259,7 @@
 
 
 $(document).ready(function(e) {
-  var h = $('nav').height() + 20;
-  $('body').animate({ paddingTop: h });
+  setTimeout(function(){
+    $('body').addClass('loaded');
+  }, 3000);
 });

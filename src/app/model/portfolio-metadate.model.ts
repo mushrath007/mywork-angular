@@ -54,3 +54,31 @@ export const PortfolioWebSitesMetadata = [
     gitlinkShow: false
   }
 ];
+
+
+export var single = [
+  {
+    "name": "HTML5",
+    "value": 100
+  },
+  {
+    "name": "Twitter Bootstrap",
+    "value": 90
+  },
+  {
+    "name": "Javascript",
+    "value": 80
+  },
+  {
+    "name": "CSS3",
+    "value": 75
+  },
+  {
+    "name": "AngularJs",
+    "value": 80
+  },
+  {
+    "name": "Angular2/5",
+    "value": 60
+  }
+];

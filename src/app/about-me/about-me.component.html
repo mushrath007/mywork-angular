@@ -1,52 +1,64 @@
 <div class="container margin-top-60">
   <div class="row about margin-bottom-50">
+
     <div class="col-lg-12 col-md-12 text-center about-header">
       <app-experiment></app-experiment>
     </div>
+
     <div class="col-md-12 about-body">
-      <div class="mushrath-profile-pic-grid-container">
-        <div class="mushrath-profile-pic-item">
-          <div class="mushrath-profile-pic-info">
-            <h3>Connect with</h3>
-            <p>linkedin profile
-              <a href="https://www.linkedin.com/in/mushrath-m-4b873598/" target="blank">
-                <span>&nbsp;</span>
-              </a>
-            </p>
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <div class="mushrath-profile-pic-grid-container">
+            <div class="mushrath-profile-pic-item">
+              <div class="mushrath-profile-pic-info">
+                <h3>Connect with</h3>
+                <p>linkedin profile
+                  <a href="https://www.linkedin.com/in/mushrath-m-4b873598/" target="blank">
+                    <span>&nbsp;</span>
+                  </a>
+                </p>
+              </div>
+              <div class="mushrath-profile-pic-thumb mushrath-profile-pic-img-1"></div>
+            </div>
           </div>
-          <div class="mushrath-profile-pic-thumb mushrath-profile-pic-img-1"></div>
+        </div>
+        <div class="col-md-8 col-xs-12">
+          <h2 class="mushrath-profile-about-me">About Me(Click Envelope)</h2>
         </div>
       </div>
-
-      <article class="envelope-container">
-        <input type="radio" name="switch" id="switch-on" class="switch-on" value="true">
-        <div class="envelope">
-          <label for="switch-on">
-            <span class="triangle cap"></span>
-            <div class="notification waiting">
-              <span class="number">Click Here</span>
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <article class="envelope-container">
+            <input type="radio" name="switch" id="switch-on" class="switch-on" value="true">
+            <div class="envelope">
+              <label for="switch-on">
+                <span class="triangle cap"></span>
+                <div class="notification waiting">
+                  <span class="number">Click Here</span>
+                </div>
+                <span class="triangle bag"></span>
+                <span class="triangle tail"></span>
+              </label>
             </div>
-            <span class="triangle bag"></span>
-            <span class="triangle tail"></span>
-          </label>
+            <div class="title">
+              <input type="radio" name="switch" id="switch-off" class="switch-off" value="false">
+              <label for="switch-off">Close About Me</label>
+            </div>
+            <div class="overlay"></div>
+            <div class="about-me-content-container">
+              <div class="about-me-content1"></div>
+              <div class="about-me-content2"></div>
+              <div class="about-me-content3"></div>
+              <ul class="list-group about-list">
+                <li class="list-group-item list-group-item1"></li>
+                <li class="list-group-item list-group-item2"></li>
+                <li class="list-group-item list-group-item3"></li>
+                <li class="list-group-item list-group-item4"></li>
+              </ul>
+            </div>
+          </article>
         </div>
-        <div class="title">
-          <input type="radio" name="switch" id="switch-off" class="switch-off" value="false">
-          <label for="switch-off">Close About Me</label>
-        </div>
-        <div class="overlay"></div>
-        <div class="about-me-content-container">
-          <div class="about-me-content1"></div>
-          <div class="about-me-content2"></div>
-          <div class="about-me-content3"></div>
-          <ul class="list-group about-list">
-            <li class="list-group-item list-group-item1"></li>
-            <li class="list-group-item list-group-item2"></li>
-            <li class="list-group-item list-group-item3"></li>
-            <li class="list-group-item list-group-item4"></li>
-          </ul>
-        </div>
-      </article>
+      </div>
 
       <div class="about-me-resume pull-right">
         <a href="#" class="btn btn-success btn-lg pull-right">
@@ -54,33 +66,6 @@
         </a>
       </div>
     </div>
-    <div class="col-lg-12 col-md-12 text-center about-skills padding-none">
-      <h1>Skills & Frameworks</h1>
-    </div>
-    <div class="col-md-12 about-skills-section">
-      <div id="container ng2-icons">
-        <div
-          ng2-carouselamos
-          class="slides-wrapper"
-          [items]="items"
-          [width]="900"
-          [$prev]="prev"
-          [$next]="next"
-          [$item]="item">
-        </div>
 
-        <ng-template #prev>
-          <i class="fa fa-angle-left fa-4 font-120"></i>
-        </ng-template>
-        <ng-template #next>
-          <i class="fa fa-angle-right fa-4 font-120"></i>
-        </ng-template>
-        <ng-template #item let-item let-i="index">
-          <div class="items">
-            <i class="{{ item.name }}"></i>
-          </div>
-        </ng-template>
-      </div>
-    </div>
   </div>
 </div>

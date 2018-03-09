@@ -1,0 +1,178 @@
+.portfolio{
+  margin-bottom: 100px;
+}
+.portfolio h1 {
+  font-size: 3em;
+  line-height: 2;
+  font-weight: 200;
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 0;
+}
+.portfolio p {
+  font-size: 1.5em;
+  font-weight: 200;
+  text-transform: capitalize;
+  color: #000;
+}
+.portfolio .grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+.portfolio .grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  background: rgba(107, 183, 86, 0.95);
+  text-align: center;
+  cursor: pointer;
+}
+.portfolio .grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  opacity: 0.8;
+}
+.portfolio .grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.portfolio .grid figure figcaption::before, .portfolio .grid figure figcaption::after {
+  pointer-events: none;
+}
+.portfolio .grid figure h2 {
+  word-spacing: -0.15em;
+  font-size: 1.5em;
+  font-weight: 200;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.portfolio .grid figure h2 a {
+  float: right;
+  font-size: 16px;
+  color: #fff;
+}
+.portfolio figure.effect-lily img {
+  max-width: none;
+  width: -webkit-calc(100% + 50px);
+  width: calc(100% + 50px);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
+.portfolio figure.effect-lily figcaption {
+  display: none;
+}
+.portfolio figure.effect-lily:hover figcaption{
+  text-align: left;
+  display: block;
+}
+.portfolio figure.effect-lily figcaption div > p{
+  font-size: 12px;
+  font-weight: bold;
+}
+.portfolio figure.effect-lily figcaption > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  width: 100%;
+  height: 30%;
+}
+.portfolio figure.effect-lily h2 {
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  opacity: 0;
+}
+.portfolio figure.effect-lily:hover img, .portfolio figure.effect-lily:hover h2, .portfolio figure.effect-lily:hover div {
+  opacity: 1;
+  background: rgba(107, 183, 86, 0.95);
+}
+.portfolio figure.effect-lily:hover img, .portfolio figure.effect-lily:hover h2 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .portfolio h1 {
+    font-size: 3em;
+    line-height: 2;
+    font-weight: 200;
+    font-style: italic;
+    text-transform: capitalize;
+    color: #008f68;
+    margin-bottom: 0;
+  }
+  .portfolio p {
+    font-size: 1.5em;
+    font-weight: 200;
+    text-transform: capitalize;
+    color: #000;
+  }
+  .portfolio .grid figure h2 {
+    font-size: 1.2em;
+  }
+  .portfolio .grid figure h2 a {
+    font-size: 13px;
+  }
+  .portfolio figure.effect-lily figcaption > div {
+    padding: 10px;
+  }
+}
+
+
+.tabs ul.tab-link li {
+  margin: 0;
+}
+.tabs ul.tab-link li a {
+  color: #313131;
+  font-size: 1.5em;
+  line-height: 2;
+  font-weight: 200;
+  text-transform: capitalize;
+  border-radius: 3px;
+  margin: 0;
+  border: 0;
+}
+.tabs ul.tab-link li.active {
+  border-bottom: 4px solid rgba(0, 143, 104, .95);
+}
+.tabs ul.tab-link li.active a {
+  color: rgba(0, 143, 104, 0.95);
+  font-weight: 500;
+  border-radius: 3px;
+  border: none !important;
+}
+.tabs ul.tab-link li.active:hover {
+  border-bottom: 4px solid rgba(0, 143, 104, .95);
+}
+.tabs ul.tab-link li:hover {
+  border-bottom: 4px solid rgba(107, 183, 86, .95);
+  cursor: pointer;
+}
+.tabs ul.tab-link li:hover a {
+  background: none;
+  border: none !important;
+}

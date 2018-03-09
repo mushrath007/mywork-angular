@@ -1,5 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }    from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent }         from './app.component';
@@ -22,6 +23,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LibraryModule } from './lib/lib.module';
 import { ServicesComponent } from './services/services.component';
 import * as Typed from 'typed.js';
+import { MyWorksComponent } from './my-works/my-works.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import * as Typed from 'typed.js';
     ReactiveFormsModule,
     NgDatepickerModule,
     Ng2CarouselamosModule,
-    LibraryModule
+    LibraryModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
@@ -45,7 +50,8 @@ import * as Typed from 'typed.js';
     AngularTwoForms2Component,
     AboutMeComponent,
     PortfolioComponent,
-    ServicesComponent
+    ServicesComponent,
+    MyWorksComponent
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]

@@ -110,51 +110,7 @@
 .about .about-body .about-list li i {
   padding: 0 15px 0 0;
 }
-.about .about-skills-section {
-  padding: 30px;
-  margin: 40px 0;
-  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
-  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
-  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
-}
-.about .about-skills-section .text-center:hover i, .about .about-skills-section .text-center:hover h4 {
-  color: rgba(107, 183, 86, .95) !important;
-}
-.about .about-skills-section .text-center p {
-  font-size: 1em;
-  font-weight: 200;
-  color: #000 !important;
-  word-break: break-all;
-}
-.about .about-skills-section .text-center h4 {
-  font-size: 1.3em;
-  text-transform: uppercase;
-}
-.about .about-skills-section .text-center h4:hover {
-  color: rgba(107, 183, 86, .95) !important;
-}
-.about .about-skills-section .carousel.slide {
-  padding: 0 60px;
-}
-.about .about-skills-section .carousel.slide .carousel-control.left, .about .about-skills-section .carousel.slide .carousel-control.right {
-  background-image: none;
-  position: absolute;
-  top: 30px;
-  height: 40px;
-  background: #6bb756;
-  width: 30px;
-  cursor: pointer;
-  outline: none;
-  padding: 4px;
-}
-.about .about-skills-section .carousel.slide .carousel-inner .item img {
-  height: 100px !important;
-}
-.about .about-skills-section .carousel.slide .carousel-inner .item .empty-space {
-  margin-bottom: 30px;
-  display: block;
-  overflow: hidden;
-}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .about .about-skills-section .carousel.slide {
@@ -166,14 +122,6 @@
   .about .about-skills-section .carousel.slide .carousel-inner .item img {
     margin: 0 auto;
   }
-}
-.font-120 {
-  font-size: 120px;
-}
-.items i {
-  font-size: 120px;
-  padding: 20px;
-  margin: 20px;
 }
 
 /* Portoflio Example css */
@@ -190,7 +138,7 @@
   height: 175px;
   display: block;
   position: relative;
-  margin: -100px auto 0;
+  margin: -100px 0 0;
   text-align: center;
   text-align-last: center;
 }
@@ -366,6 +314,10 @@
   transform: translateX(0) rotate(0)
 }
 
+.mushrath-profile-about-me{
+  color: black;
+}
+
 .about-me-resume{
   width: 425px;
   height: 94px;
@@ -431,7 +383,7 @@
   width: 11em;
   height: 9.5em;
   border: 1px solid white;
-  background-color: #fbf5dd;
+  background-color: darkslategrey;
   -moz-transform: rotateZ(30deg) skew(-30deg);
   -ms-transform: rotateZ(30deg) skew(-30deg);
   -webkit-transform: rotateZ(30deg) skew(-30deg);
@@ -491,7 +443,7 @@
   width: 13em;
   height: 10.5em;
   border: 1px solid #f8ecc2;
-  background-color: #fbf5dd;
+  background-color: darkslategrey;
   -moz-transform: rotateZ(30deg) skew(-31deg);
   -ms-transform: rotateZ(30deg) skew(-31deg);
   -webkit-transform: rotateZ(30deg) skew(-31deg);
@@ -618,7 +570,6 @@
   padding: 1.4em;
   display: block;
   color: blueviolet;
-  border: 1px solid white;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;

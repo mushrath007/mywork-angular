@@ -1,34 +1,50 @@
-<div class="container portfolio margin-top-60">
+<div class="container">
   <div class="row">
-    <div class="col-lg-12 col-md-12 text-center">
-      <h1>Portfolio - My Works</h1>
+    <div class="col-lg-12 col-md-12 text-center about-skills padding-none">
+      <h1>Portfolio - Skills & Frameworks</h1>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="grid">
-        <app-tabs>
-          <app-tab [title]="'Web Sites'">
-            <div *ngFor="let metadata of portfolioWebSitesMetadata; let i=index">
-              <a href="{{metadata.webHref}}" target="_blank">
-                <figure class="effect-lily">
-                  <img src="{{metadata.iconPath}}" alt="{{metadata.title}}" />
-                  <figcaption>
-                    <div>
-                      <h4>{{metadata.title}}
-                        <a href="{{metadata.GitHref}}" *ngIf="metadata.gitlinkShow" target="_blank">
-                          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-                        </a>
-                      </h4>
-                      <p>{{metadata.technology}}</p>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-          </app-tab>
-        </app-tabs>
+    <div class="col-md-12 about-skills-section">
+      <div id="container ng2-icons">
+        <div
+          ng2-carouselamos
+          class="slides-wrapper"
+          [items]="items"
+          [width]="900"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item">
+        </div>
+
+        <ng-template #prev>
+          <i class="fa fa-angle-left fa-4 font-120"></i>
+        </ng-template>
+        <ng-template #next>
+          <i class="fa fa-angle-right fa-4 font-120"></i>
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+          <div class="items">
+            <i class="{{ item.name }}"></i>
+          </div>
+        </ng-template>
       </div>
     </div>
+    <div class="col-md-12 about-language-section">
+      <ngx-charts-gauge
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="data"
+        [legend]="true"
+        [legendTitle]="'Languages'"
+        [min]="0"
+        [max]="100"
+        [angleSpan]="360"
+        [startAngle]="-240"
+        [units]="'Skills'"
+        [bigSegments]="0"
+        [smallSegments]="0"
+        (select)="onSelect($event)">
+      </ngx-charts-gauge>
+    </div>
   </div>
+
 </div>

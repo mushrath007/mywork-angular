@@ -20,4 +20,10 @@ export class AppComponent {
   //}
 
   title = 'Mushrath Mohammad Angular Demo';
+  ngAfterViewInit(){
+
+  }
+  ngOnInit(){
+
+  }
 }
