@@ -22,4 +22,3 @@ deploy:
     branch: master
   edge:
       branch: v1.8.47
-    ⋮ # rest
