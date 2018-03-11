@@ -311,3 +311,150 @@ body {
     width: 40%;
   }
 }
+
+
+
+/*ButterFly effect CSS*/
+
+ #butterflycontainer{
+  position:absolute;
+  top:0;
+  left:0;
+  -webkit-transform-style:preserve-3d
+}
+ .nabpi{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform-origin:50% 50%;
+  -moz-transform-origin:50% 50%;
+  transform-style:preserve-3d;
+  transform-origin:50% 50%
+}
+ .wing{
+  margin:0;
+  -webkit-animation:wing-animation .5s linear infinite;
+  -moz-animation:wing-animation .5s linear infinite;
+  animation:wing-animation .5s linear infinite
+}
+ .left.wing{
+  -webkit-transform-origin:right center;
+  -moz-transform-origin:right center;
+  transform-origin:right center
+}
+ .right.wing{
+  -webkit-transform-origin:left center;
+  -moz-transform-origin:left center;
+  transform-origin:left center
+}
+ .n1{
+  width:233px;
+  height:130px;
+  margin-left:-116px;
+  margin-top:-65px
+}
+ .n3,.n2{
+  margin-top:-77px
+}
+ .n1 .body{
+  position:absolute;
+  background:url('/assets/images/b-1.png') -237px top no-repeat;
+  width:49px;
+  height:130px;
+  margin-left:90px
+}
+ .n1 .left.wing{
+  position:absolute;
+  background:url('/assets/images/b-1.png') left top no-repeat;
+  width:110px;
+  height:130px
+}
+ .n1 .right.wing{
+  position:absolute;
+  background:url('/assets/images/b-1.png') -127px top no-repeat;
+  width:110px;
+  height:130px;
+  margin-left:123px
+}
+.n2{
+  width:269px;
+  height:154px;
+  margin-left:-135px
+}
+ .n2 .body{
+  position:absolute;
+  background:url('/assets/images/b-2.png') -269px top no-repeat;
+  width:55px;
+  height:154px;
+  margin-left:101px
+}
+ .n2 .left.wing{
+  position:absolute;
+  background:url('/assets/images/b-2.png') left top no-repeat;
+  width:132px;
+  height:154px
+}
+ .n2 .right.wing{
+  position:absolute;
+  background:url('/assets/images/b-2.png') -137px top no-repeat;
+  width:132px;
+  height:154px;
+  margin-left:138px
+}
+ .n3{
+  width:269px;
+  height:154px;
+  margin-left:-135px
+}
+ .n3 .body{
+  position:absolute;
+  background:url('/assets/images/b-3.png') -269px top no-repeat;
+  width:55px;
+  height:154px;
+  margin-left:101px
+}
+ .n3 .left.wing{
+  position:absolute;
+  background:url('/assets/images/b-3.png') left top no-repeat;
+  width:132px;
+  height:154px
+}
+ .n3 .right.wing{
+  position:absolute;
+  background:url('/assets/images/b-3.png') -137px top no-repeat;
+  width:132px;
+  height:154px;
+  margin-left:138px
+}
+@-webkit-keyframes nabpi-animation{
+  from,to{
+    -webkit-transform:translateZ(0)
+  }
+  50%{
+    -webkit-transform:translateZ(100)
+  }
+}
+@-webkit-keyframes wing-animation{
+  from,to{
+    -webkit-transform:rotateY(0)
+  }
+  70%{
+    -webkit-transform:rotateY(80deg)
+  }
+}
+@-moz-keyframes wing-animation{
+  from,to{
+    -moz-transform:rotateY(0)
+  }
+  70%{
+    -moz-transform:rotateY(80deg)
+  }
+}
+@keyframes wing-animation{
+  from,to{
+    transform:rotateY(0)
+  }
+  70%{
+    transform:rotateY(80deg)
+  }
+}
