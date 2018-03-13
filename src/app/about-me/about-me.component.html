@@ -1,9 +1,7 @@
 <div class="container margin-top-60">
   <div class="row about margin-bottom-50">
 
-    <div class="col-lg-12 col-md-12 text-center about-header">
-      <app-experiment></app-experiment>
-    </div>
+    <div class="col-lg-12 col-md-12 text-center about-header"></div>
 
     <div class="col-md-12 about-body">
       <div class="row">
@@ -23,7 +21,10 @@
           </div>
         </div>
         <div class="col-md-8 col-xs-12">
-          <h2 class="mushrath-profile-about-me">About Me(Click Envelope)</h2>
+          <div class="about-me-desc text-align-right">
+            <h2 class="mushrath-profile-about-me">About Me(Click Envelope)</h2>
+            <h3 class="about-me-desc-content">Hello, I'm Mushrath Mohammad,<br/>Web Developer and UI Javascript expert.</h3>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -59,13 +60,16 @@
           </article>
         </div>
       </div>
-
-      <div class="about-me-resume pull-right">
-        <a href="https://drive.google.com/open?id=1srFXM_PzCrD_BykMweoj5uBdCxuXXn0t" target="_blank" class="btn btn-success btn-lg pull-right">
-          <span class="glyphicon glyphicon-download"></span> Download my resume
-        </a>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="" [ngClass]="noMobile ? 'about-me-resume pull-right about-me-resume-click-here-img' : 'text-center'">
+            <a href="https://drive.google.com/open?id=1srFXM_PzCrD_BykMweoj5uBdCxuXXn0t" target="_blank" class="btn btn-success btn-lg"
+               [ngClass]="noMobile ? 'pull-right' : ''">
+              <span class="glyphicon glyphicon-download"></span> Download my resume
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </div>

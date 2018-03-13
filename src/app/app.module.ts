@@ -23,6 +23,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LibraryModule } from './lib/lib.module';
 import { ServicesComponent } from './services/services.component';
 import * as Typed from 'typed.js';
+
 import { MyWorksComponent } from './my-works/my-works.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 

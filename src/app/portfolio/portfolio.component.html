@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 text-center about-skills padding-none">
+<div class="container margin-top-60">
+  <div class="row margin-bottom-50">
+    <div class="col-lg-12 col-md-12 text-center about-skills">
       <h1>Portfolio - Skills & Frameworks</h1>
     </div>
     <div class="col-md-12 about-skills-section">
@@ -28,7 +28,7 @@
         </ng-template>
       </div>
     </div>
-    <div class="col-md-12 about-language-section">
+    <div class="col-md-12 about-language-section" *ngIf="noMobile">
       <ngx-charts-gauge
         [view]="view"
         [scheme]="colorScheme"
@@ -46,5 +46,4 @@
       </ngx-charts-gauge>
     </div>
   </div>
-
 </div>

@@ -322,6 +322,9 @@
   width: 425px;
   height: 94px;
   float: right;
+}
+
+.about-me-resume-click-here-img{
   background: url('/assets/images/click-here.png') 0 bottom no-repeat;
 }
 /*Envelop Css*/
@@ -334,10 +337,27 @@
 .envelope-container .switch-on, .switch-off{
   display: none;
 }
-
+.about-me-content-container{
+  margin-top: -60px;
+}
 .about-me-content-container,.title,.overlay{
   display: none;
 }
+
+.about-me-desc-content{
+  font-family: font-file-82132;
+}
+
+.about-me-desc-content .blast {
+  opacity: 0;
+  display:inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.about-me-desc-content .blast:hover {
+  color:#08fdd8;
+}
+
 
 .envelope {
   width: 18.75em;
@@ -887,8 +907,7 @@ input.switch-on[type="radio"]:checked + .envelope .notification .number {
   }
 
   article {
-    max-width: 240px;
-    margin: 0 auto 2em;
+    max-width: auto;
   }
 
   .action-click {
@@ -908,7 +927,7 @@ input.switch-on[type="radio"]:checked + .envelope .notification .number {
   }
 
   h2 {
-    display: none;
+    text-align: center;
   }
 
   input.switch-on[type="radio"]:checked ~ .overlay {

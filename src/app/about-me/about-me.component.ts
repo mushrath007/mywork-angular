@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Typed from 'typed.js';
 
+declare var $:any;
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -12,11 +14,63 @@ export class AboutMeComponent implements OnInit {
 
   }
 
+  noMobile:boolean = true;
+
   ngOnInit() {
+
+    $(".about-me-desc .about-me-desc-content").blast({
+      delimiter: "character",
+      tag: "span"
+    });
+
+    let a = 0;
+
+
+    $(".about h1 .blast").each(function () {
+
+      var el = $(this);
+
+      setTimeout(function () {
+
+        el.addClass('animated bounceIn');
+
+
+      }, a);
+
+
+      a = a + 100;
+
+    });
+
+    setTimeout(function(){
+
+      $(".about-me-desc .blast").removeClass('animated bounceIn');
+      $(".about-me-desc .blast").css('opacity',1);
+
+      $(".about-me-desc .blast").mouseenter(function (){
+
+        var el = $(this);
+
+        $(this).addClass('animated rubberBand');
+        $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+          el.removeClass('animated rubberBand');
+
+        });
+
+      });
+
+
+    },1000);
+
+
     this.loadInfo();
+    if (window.screen.width <= 426) { // 768px portrait
+      this.noMobile = false;
+    }
   }
 
-  loadInfo(){
+  loadInfo() {
     let profileInfo = ["Mushrath Mohammad.", "Senior UI Developer at TD.", "I'm a passionate Front-End Developer creating modern and responsive design for Web and Mobile."];
 
     profileInfo.forEach(function (value, i) {
@@ -27,7 +81,7 @@ export class AboutMeComponent implements OnInit {
         smartBackspace: true
       };
 
-      new Typed(".about-me-content"+(i+1), options);
+      new Typed(".about-me-content" + (i + 1), options);
 
     });
 
@@ -44,7 +98,7 @@ export class AboutMeComponent implements OnInit {
         smartBackspace: true
       };
 
-      new Typed(".list-group-item"+(i+1), options);
+      new Typed(".list-group-item" + (i + 1), options);
 
     });
   }

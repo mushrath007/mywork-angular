@@ -20,10 +20,13 @@ export class AppComponent {
   //}
 
   title = 'Mushrath Mohammad Angular Demo';
+  noMobile:boolean = true;
   ngAfterViewInit(){
 
   }
   ngOnInit(){
-
+    if (window.screen.width <= 425) {
+      this.noMobile = false;
+    }
   }
 }

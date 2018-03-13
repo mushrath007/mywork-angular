@@ -1,7 +1,3 @@
-function IsEmail(t) {
- var e = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
- return e.test(t) ? !0 : !1
-}
 var $ = jQuery.noConflict();
 $(document).ready(function() {
   function t(t) {
@@ -28,7 +24,7 @@ $(document).ready(function() {
   }
 
   function n(e) {
-   this.$elt = t('<div class="nabpi n' + e + '"><div class="left wing"></div><div class="body"></div><div class="right wing"></div></div'), this.elt = this.$elt[0], this.$wings = this.$elt.find(".wing"), this.scale = .3 * Math.random() + .1, this.$wings.css("animation-duration", 2 * this.scale + "s"), this.x = Math.random() * t(document).width(), this.y = Math.random() * t(document).height(), this.vx = 10 * Math.random() - 5, this.vy = 10 * Math.random() - 5, this.l = 20 * this.scale, this.z = Math.round(-1 / this.scale * 2500), this.move()
+   this.$elt = t('<div class="indBut n' + e + '"><div class="left wing"></div><div class="body"></div><div class="right wing"></div></div'), this.elt = this.$elt[0], this.$wings = this.$elt.find(".wing"), this.scale = .3 * Math.random() + .1, this.$wings.css("animation-duration", 2 * this.scale + "s"), this.x = Math.random() * t(document).width(), this.y = Math.random() * t(document).height(), this.vx = 10 * Math.random() - 5, this.vy = 10 * Math.random() - 5, this.l = 20 * this.scale, this.z = Math.round(-1 / this.scale * 2500), this.move()
   }
 
   function i() {
@@ -69,3 +65,4 @@ $(document).ready(function() {
   })
  }(jQuery), jQuery(document).ready(function() {
  });
+

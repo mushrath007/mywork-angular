@@ -14,6 +14,7 @@ export class PortfolioComponent implements OnInit {
 
   view: any[] = [];
   data: any[];
+  noMobile:boolean = true;
 
 
   colorScheme = {
@@ -58,6 +59,9 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.portfolioWebSitesMetadata = PortfolioWebSitesMetadata;
+    if (window.screen.width <= 426) { // 768px portrait
+      this.noMobile = false;
+    }
   }
 
 }
