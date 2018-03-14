@@ -284,6 +284,16 @@ body {
   /*.pages-stack--open{*/
     /*margin: 100px 0 0 0;*/
   /*}*/
+
+  .text-align-right-sm{
+    text-align: right;
+  }
+  .text-align-left-sm{
+    text-align: left;
+  }
+  .text-align-center-sm{
+    text-align: center;
+  }
   .page:after {
     left: 92%;
     width: 8%;
@@ -295,6 +305,16 @@ body {
   /*.pages-stack--open{*/
     /*margin: 100px 0 0 0;*/
   /*}*/
+
+  .text-align-right-sm{
+    text-align: right;
+  }
+  .text-align-left-sm{
+    text-align: left;
+  }
+  .text-align-center-sm{
+    text-align: center;
+  }
   .page:after {
     left: 92%;
     width: 8%;

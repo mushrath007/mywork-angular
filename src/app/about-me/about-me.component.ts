@@ -18,6 +18,11 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit() {
 
+    $(".about-me-desc .mushrath-profile-about-me").blast({
+      delimiter: "character",
+      tag: "span"
+    });
+
     $(".about-me-desc .about-me-desc-content").blast({
       delimiter: "character",
       tag: "span"
@@ -26,7 +31,7 @@ export class AboutMeComponent implements OnInit {
     let a = 0;
 
 
-    $(".about h1 .blast").each(function () {
+    $(".about-me-desc h1 .blast").each(function () {
 
       var el = $(this);
 
