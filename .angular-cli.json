@@ -8,7 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
+        "assets/images",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,11 +19,18 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/css/demo.css",
+        "assets/css/component.css",
+        "assets/css/animation.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/blast-text/jquery.blast.min.js"
+        "../node_modules/blast-text/jquery.blast.min.js",
+        "../src/assets/thirdpartyjs/modernizr-custom.js",
+        "../src/assets/thirdpartyjs/classie.js",
+        "../src/assets/thirdpartyjs/main.js",
+        "../src/assets/thirdpartyjs/butterflyeffect.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

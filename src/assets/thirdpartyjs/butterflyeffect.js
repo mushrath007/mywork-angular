@@ -1,3 +1,4 @@
+/*!Butterfly !*/
 var $ = jQuery.noConflict();
 $(document).ready(function() {
   function t(t) {
