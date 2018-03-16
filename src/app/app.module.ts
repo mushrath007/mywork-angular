@@ -26,6 +26,8 @@ import * as Typed from 'typed.js';
 
 import { MyWorksComponent } from './my-works/my-works.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -38,7 +40,12 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     Ng2CarouselamosModule,
     LibraryModule,
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      // please get your own API key here:
+      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+      apiKey: 'AIzaSyDz-39sKLx0AA97aP_3ZSpXinufMGSA4qg'
+    })
   ],
   declarations: [
     AppComponent,
@@ -52,7 +59,8 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     AboutMeComponent,
     PortfolioComponent,
     ServicesComponent,
-    MyWorksComponent
+    MyWorksComponent,
+    ContactMeComponent
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]

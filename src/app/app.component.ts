@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-//declare var classie: any;
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,11 @@ export class AppComponent {
   //  this.loadComponent = true;
   //}
 
-  title = 'Mushrath Mohammad Angular Demo';
+  butterFlyOnOff() {
+  $("#butterflycontainer").toggleClass("force_hide");
+  $("#butterflyOnOff").toggleClass("butterflyOnOffClicked");
+  }
+
   noMobile:boolean = true;
   ngAfterViewInit(){
 

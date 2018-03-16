@@ -403,7 +403,7 @@
   width: 11em;
   height: 9.5em;
   border: 1px solid white;
-  background-color: darkslategrey;
+  background: linear-gradient(to right,#891515,rgba(0, 6, 0, 0.97));
   -moz-transform: rotateZ(30deg) skew(-30deg);
   -ms-transform: rotateZ(30deg) skew(-30deg);
   -webkit-transform: rotateZ(30deg) skew(-30deg);
@@ -463,7 +463,7 @@
   width: 13em;
   height: 10.5em;
   border: 1px solid #f8ecc2;
-  background-color: darkslategrey;
+  background: linear-gradient(to right,#891515,rgba(0, 6, 0, 0.97));
   -moz-transform: rotateZ(30deg) skew(-31deg);
   -ms-transform: rotateZ(30deg) skew(-31deg);
   -webkit-transform: rotateZ(30deg) skew(-31deg);

@@ -13,7 +13,7 @@
 
 	'use strict';
 
-  setTimeout(function(){
+  $(document).ready(function(e) {
     var support = { transitions: Modernizr.csstransitions },
     // transition end event name
       transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
@@ -256,9 +256,7 @@
 
       buildStack();
     }
-
-  }, 3000);
-
+  });
 
 })(window);
 
@@ -266,5 +264,5 @@
 $(document).ready(function(e) {
   setTimeout(function(){
     $('body').addClass('loaded');
-  }, 3000);
+  }, 0);
 });

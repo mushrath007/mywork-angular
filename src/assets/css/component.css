@@ -476,3 +476,103 @@ html.js,
 		margin: 1em;
 	}
 }
+
+
+/*Input Filed css*/
+
+.error-field{
+  font-size: 75%;
+  margin-top: .54166667em;
+  top: calc(100% - 1.66666667em);
+  color: red;
+  margin-bottom: 5px;
+}
+
+.styled-input {
+  float: left;
+  width: 33.3333%;
+  margin: 2rem 0 0.5rem;
+  position: relative;
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide { width: 100%; }
+
+input,
+textarea, select {
+  padding: 1rem 1rem;
+  color: black;
+  width: 100%;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+
+input ~ span,
+textarea ~ span ,select ~ span {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #8e44ad;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+input:focus,
+textarea:focus, select:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span , select:focus ~span{
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+input:focus ~ label, textarea:focus ~ label, select:focus ~ label {
+  font-size: 1.3em;
+  color: #8e44ad;
+  top: -3.25rem;
+  padding: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+  margin-top: 5px;
+}
+
+input.ng-touched ~ label, textarea.ng-touched ~ label, select.ng-touched ~ label {
+  font-size: 1.3em;
+  color: #8e44ad;
+  top: -3.25rem;
+  padding: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+
+.paper-background {
+  background-color: #fff;
+  background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+  padding: 30px;
+  -moz-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.3);
+}

@@ -4,6 +4,7 @@
   <div class="pages-nav__item"><a class="link link--page" href="#page-portfolio">Portfolio</a></div>
   <div class="pages-nav__item"><a class="link link--page" href="#page-mywork">My Works</a></div>
   <div class="pages-nav__item"><a class="link link--page" href="#page-ang2comp">Angular 2 Component Forms</a></div>
+  <div class="pages-nav__item"><a class="link link--page" href="#page-contactme">Contact Me</a></div>
   <ul class="nav navbar-nav navbar-right nav-menu-list-right">
     <li>
       <a href="https://github.com/mushrath007" target="_blank" title="Github">
@@ -26,6 +27,11 @@
 <!-- pages stack -->
 <div class="pages-stack">
   <!-- page -->
+  <div class="page" id="page-contactme" data-content="Contact Me">
+    <div>
+      <app-contact-me class="container-fluid"></app-contact-me>
+    </div>
+  </div>
   <div class="page" id="page-aboutme" data-content="About Me">
     <div>
       <app-about-me></app-about-me>
@@ -46,10 +52,16 @@
       <app-angular-two-forms class="container-fluid"></app-angular-two-forms>
     </div>
   </div>
+
 </div>
 <!-- /pages-stack -->
 <button class="menu-button"><span>Menu</span></button>
 <button class="float click-here">
   <span class="fa fa-arrow-left my-float"> Click Here !!</span>
 </button>
-
+<p class="float-top-right">Toogle butterflies</p>
+<label class="switch">
+  <button type="button" id="butterflyOnOff" (click)="butterFlyOnOff()">
+  </button>
+  <span class="slider"></span>
+</label>
