@@ -1,0 +1,87 @@
+<div class="contact-me margin-top-60">
+  <div class="container paper-background">
+    <h1 class="text-align-center contact-me-title">Contact Me</h1>
+    <form [formGroup]="contactForm" novalidate>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-6">
+                <div class="styled-input wide">
+                  <input type="text" formControlName="name" [pattern]="'^[-a-zA-Z ]*$'">
+                  <label>Name</label><span></span>
+                </div>
+                <div class="error-field" *ngIf="contactForm.controls.name.invalid && contactForm.controls.name.touched">
+                  Name is required
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="styled-input wide">
+                  <input type="text" formControlName="contactEmail" [pattern]="'^[a-zA-Z0-9]+[-a-zA-Z0-9._]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,6}$'">
+                  <label>Email Address</label><span></span>
+                </div>
+                <div class="error-field" *ngIf="contactForm.controls.contactEmail.invalid && contactForm.controls.contactEmail.touched">
+                  Email Address is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <div class="styled-input wide">
+                  <textarea formControlName="message" [pattern]="'^[-a-zA-Z ]*$'"></textarea>
+                  <label>Short Message</label><span></span>
+                </div>
+                <div class="error-field" *ngIf="contactForm.controls.message.invalid && contactForm.controls.message.touched">
+                  Message is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row pull-right">
+            <div class="col-md-6">
+              <button class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12 margin-top-20">
+          <agm-map
+            [latitude]="lat"
+            [longitude]="lng"
+            [zoom]="zoom"
+            [disableDefaultUI]="false"
+            [zoomControl]="false"
+            (mapClick)="mapClicked($event)">
+
+            <agm-marker
+              *ngFor="let m of markers; let i = index"
+              (markerClick)="clickedMarker(m.label, i)"
+              [latitude]="m.lat"
+              [longitude]="m.lng"
+              [label]="m.label"
+              [markerDraggable]="m.draggable"
+              (dragEnd)="markerDragEnd(m, $event)">
+
+              <agm-info-window>
+                <strong>InfoWindow content</strong>
+              </agm-info-window>
+
+            </agm-marker>
+
+            <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
+                        [radius]="5000"
+                        [fillColor]="'red'"
+                        [circleDraggable]="true"
+                        [editable]="true">
+            </agm-circle>
+
+          </agm-map>
+        </div>
+      </div>
+
+    </form>
+    <p>Form value: {{ contactForm.value | json }}</p>
+    <p>Form status: {{ contactForm.status | json }}</p>
+  </div>
+</div>
