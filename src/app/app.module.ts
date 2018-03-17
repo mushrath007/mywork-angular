@@ -29,6 +29,9 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { AgmCoreModule } from '@agm/core';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
+
 
 @NgModule({
   imports: [
@@ -45,7 +48,8 @@ import { AgmCoreModule } from '@agm/core';
       // please get your own API key here:
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyDz-39sKLx0AA97aP_3ZSpXinufMGSA4qg'
-    })
+    }),
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   declarations: [
     AppComponent,
