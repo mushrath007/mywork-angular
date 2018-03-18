@@ -9,6 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
+        "precache": "sw-precache --verbose --config=sw-precache-config.js",
         "build.prod": "ng build --aot --prod --progress false --base-href \"https://mushrath007.github.io/mywork-angular/\""
     },
     "private": true,
