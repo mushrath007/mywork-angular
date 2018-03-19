@@ -32,6 +32,8 @@ import { AgmCoreModule } from '@agm/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'
 
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   imports: [
@@ -49,7 +51,8 @@ import { environment } from '../environments/environment'
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyDz-39sKLx0AA97aP_3ZSpXinufMGSA4qg'
     }),
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    HttpModule
   ],
   declarations: [
     AppComponent,
@@ -66,7 +69,7 @@ import { environment } from '../environments/environment'
     MyWorksComponent,
     ContactMeComponent
   ],
-  providers: [ HeroService, MessageService ],
+  providers: [ HeroService, MessageService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

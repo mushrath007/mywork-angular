@@ -1,7 +1,8 @@
 <div class="contact-me margin-top-60">
   <div class="container paper-background">
     <h1 class="text-align-center contact-me-title">Contact Me</h1>
-    <form [formGroup]="contactForm" novalidate>
+    <div *ngIf="showSpinner" class="spinner"></div>
+    <form *ngIf="!successFullySubmitted"  [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="row">
         <div class="col-md-6 col-xs-12">
           <div class="row">
@@ -79,9 +80,10 @@
           </agm-map>
         </div>
       </div>
-
     </form>
-    <p>Form value: {{ contactForm.value | json }}</p>
-    <p>Form status: {{ contactForm.status | json }}</p>
+    <div *ngIf="successFullySubmitted" class="contact-me-thank-you">
+      <h2><em>Thanks</em> for contacting me!
+        I will get back to you soon!</h2>
+    </div>
   </div>
 </div>
