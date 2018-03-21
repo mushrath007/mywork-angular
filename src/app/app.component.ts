@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-declare var $: any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,11 +16,11 @@ export class AppComponent {
   //  console.log('here');
   //  this.loadComponent = true;
   //}
-
-  butterFlyOnOff() {
-  $("#butterflycontainer").toggleClass("force_hide");
-  $("#butterflyOnOff").toggleClass("butterflyOnOffClicked");
-  }
+  //
+  //butterFlyOnOff() {
+  //$("#butterflycontainer").toggleClass("force_hide");
+  //$("#butterflyOnOff").toggleClass("butterflyOnOffClicked");
+  //}
 
   noMobile:boolean = true;
   ngAfterViewInit(){

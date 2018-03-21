@@ -5,6 +5,8 @@
     "installMode": "prefetch",
     "resources": {
       "files": [
+        "/assets/**/*",
+        "!/ngsw-worker.js",
         "/favicon.ico",
         "/index.html"
       ],
@@ -23,5 +25,29 @@
         "/assets/**"
       ]
     }
-  }]
+  }],
+  "dataGroups": [{
+    "name": "api-freshness",
+    "urls": [
+      "/timeline"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "3d",
+      "timeout": "1m",
+      "strategy": "freshness"
+    }
+  },
+    {
+      "name": "api-performance",
+      "urls": [
+        "/favorites"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "1m",
+        "strategy": "performance"
+      }
+    }]
 }

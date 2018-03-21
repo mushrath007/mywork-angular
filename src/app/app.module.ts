@@ -33,7 +33,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'
 
 import { HttpModule } from '@angular/http';
-
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 @NgModule({
   imports: [
@@ -51,7 +51,8 @@ import { HttpModule } from '@angular/http';
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyDz-39sKLx0AA97aP_3ZSpXinufMGSA4qg'
     }),
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    AgmSnazzyInfoWindowModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
     HttpModule
   ],
   declarations: [

@@ -345,7 +345,7 @@ body {
 /*ButterFly effect CSS*/
 
  #butterflycontainer{
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   -webkit-transform-style:preserve-3d

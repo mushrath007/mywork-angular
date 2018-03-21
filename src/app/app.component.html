@@ -27,11 +27,6 @@
 <!-- pages stack -->
 <div class="pages-stack">
   <!-- page -->
-  <div class="page" id="page-contactme" data-content="Contact">
-    <div>
-      <app-contact-me class="container-fluid"></app-contact-me>
-    </div>
-  </div>
   <div class="page" id="page-aboutme" data-content="About Me">
     <div>
       <app-about-me></app-about-me>
@@ -52,16 +47,22 @@
       <app-angular-two-forms class="container-fluid"></app-angular-two-forms>
     </div>
   </div>
-
+  <div class="page" id="page-contactme" data-content="Contact">
+    <div>
+      <app-contact-me class="container-fluid"></app-contact-me>
+    </div>
+  </div>
 </div>
 <!-- /pages-stack -->
 <button class="menu-button"><span>Menu</span></button>
 <button class="float click-here">
   <span class="fa fa-arrow-left my-float"> Click Here !!</span>
 </button>
-<p class="float-top-right">Get Rid of butterflies</p>
-<label class="switch">
-  <button type="button" id="butterflyOnOff" (click)="butterFlyOnOff()">
-  </button>
-  <span class="slider"></span>
-</label>
+<!--<p class="float-top-right">Get Rid of butterflies</p>-->
+<!--<label class="switch">-->
+  <!--<button type="button" id="butterflyOnOff" (click)="butterFlyOnOff()">-->
+  <!--</button>-->
+  <!--<span class="slider"></span>-->
+<!--</label>-->
+<app-floating-switches></app-floating-switches>
+

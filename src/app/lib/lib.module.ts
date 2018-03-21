@@ -6,6 +6,7 @@ import { ImageComponent } from './image/image.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tab/tab.component';
+import { FloatingSwitchesComponent } from './floating-switches/floating-switches.component';
 
 @NgModule({
     imports: [
@@ -17,13 +18,15 @@ import { TabComponent } from './tab/tab.component';
       ImageComponent,
       ScrollToTopComponent,
       TabsComponent,
-      TabComponent
+      TabComponent,
+      FloatingSwitchesComponent
   ],
   exports: [
     ImageComponent,
     ScrollToTopComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    FloatingSwitchesComponent
   ],
     providers: [
     ]

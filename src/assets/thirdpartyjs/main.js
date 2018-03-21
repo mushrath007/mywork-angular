@@ -57,6 +57,9 @@
     function init() {
       buildStack();
       initEvents();
+      setTimeout(function(){
+        toggleMenu();
+      }, 3000);
     }
 
     function buildStack() {
