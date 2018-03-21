@@ -28,7 +28,7 @@ html.js,
   background-color: #6a6a6a;
 }
 .overflow_style{
-  overflow: auto!important;
+  /*overflow: auto!important;*/
   position: relative;
 }
 
