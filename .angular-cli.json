@@ -25,7 +25,8 @@
         "../node_modules/snazzy-info-window/dist/snazzy-info-window.css",
         "assets/css/demo.css",
         "assets/css/component.css",
-        "assets/css/animation.css"
+        "assets/css/animation.css",
+        "../node_modules/ngx-toastr/toastr.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

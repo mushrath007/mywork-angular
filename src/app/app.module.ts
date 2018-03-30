@@ -35,6 +35,8 @@ import { environment } from '../environments/environment'
 import { HttpModule } from '@angular/http';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -53,7 +55,12 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     }),
     AgmSnazzyInfoWindowModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
-    HttpModule
+    HttpModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }), // ToastrModule added
   ],
   declarations: [
     AppComponent,
