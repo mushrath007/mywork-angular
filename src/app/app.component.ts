@@ -22,7 +22,7 @@ export class AppComponent {
 
   gaGetCountry() {
 
-    this.http.post('https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A172611116&start-date=30daysAgo&end-date=2018-03-30&metrics=ga%3Ausers&access_token=ya29.GluOBdb6FgBlw7Q3zxXWjhVFL4tbtiq89CIRGjdyt7kSpQRVpE0X2vJulvmUMEwUzTQr36fZvgSL499fNMIMJBg2H4khWBwHuSp3UehV9mWOAu7HCEd9TeSAVUh2','','') // google script code follow https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server/blob/master/index.html for more details
+    this.http.get('https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A172611116&start-date=30daysAgo&end-date=2018-03-30&metrics=ga%3Ausers&access_token=ya29.GluOBdb6FgBlw7Q3zxXWjhVFL4tbtiq89CIRGjdyt7kSpQRVpE0X2vJulvmUMEwUzTQr36fZvgSL499fNMIMJBg2H4khWBwHuSp3UehV9mWOAu7HCEd9TeSAVUh2') // google script code follow https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server/blob/master/index.html for more details
       .subscribe(
         res => {
           //drawRegionsMap(res);
