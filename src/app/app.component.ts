@@ -82,7 +82,7 @@ export class AppComponent {
     if (window.screen.width <= 425) {
       this.noMobile = false;
     }
-
+    gaGetCountry();
 
   }
 }
