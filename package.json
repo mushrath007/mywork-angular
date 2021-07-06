@@ -32,7 +32,7 @@
         "@angular/platform-browser-dynamic": "^5.2.0",
         "@angular/router": "^5.2.0",
         "@angular/service-worker": "^5.2.9",
-        "@swimlane/ngx-charts": "^7.1.1",
+        "@swimlane/ngx-charts": "^9.1.0",
         "blast-text": "^2.0.0",
         "core-js": "^2.4.1",
         "ng2-carouselamos": "^3.2.0",
